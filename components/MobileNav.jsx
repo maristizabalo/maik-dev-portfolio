@@ -4,32 +4,36 @@ import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci"
+import { useLocale, useTranslations } from "next-intl";
 
-const links = [
-  {
-    name: "home",
-    path: "/",
-  },
-  {
-    name: "services",
-    path: "/services",
-  },
-  {
-    name: "resume",
-    path: "/resume",
-  },
-  {
-    name: "work",
-    path: "/work",
-  },
-  {
-    name: "contact",
-    path: "/contact",
-  },
-]
 
 const MobileNav = () => {
   const pathname = usePathname();
+  const t = useTranslations('Nav');
+  const locale = useLocale();
+
+  const links = [
+    {
+        name: "home",
+        path: `/${locale}`,
+    },
+    {
+        name: "services",
+        path: `/${locale}/services`,
+    },
+    {
+        name: "resume",
+        path: `/${locale}/resume`,
+    },
+    {
+        name: "work",
+        path: `/${locale}/work`,
+    },
+    {
+        name: "contact",
+        path: `/${locale}/contact`,
+    },
+]
 
   return (
     <Sheet>
@@ -41,7 +45,7 @@ const MobileNav = () => {
         <div className="mt-32 mb-40 text-center text-2xl">
           <Link href="/">
             <h1 className="text-4xl font-semibold">
-              Maicol
+              Mj
               <span className="text-accent">.</span>
             </h1>
           </Link>
@@ -56,8 +60,8 @@ const MobileNav = () => {
               className={`${link.path === pathname &&
                 "text-accent border-b-2 border-accent"
                 } text-xl capitalize hover:text-accent transition-all`}>
-                  {link.name}
-                </Link>
+              {t(`${link.name}`)}
+            </Link>
           })}
         </nav>
       </SheetContent>

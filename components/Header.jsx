@@ -1,11 +1,14 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { useTranslations } from "next-intl";
 
 //Components
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 
 const Header = () => {
+    const t = useTranslations('Nav')
+
     return (
         <header className="py-8 xl:py-12 text-white">
             <div className="container mx-auto flex justify-between items-center">
@@ -20,7 +23,7 @@ const Header = () => {
                 <div className="hidden xl:flex items-center gap-8">
                     <Nav />
                     <Link href="/contact">
-                        <Button >Hire me</Button>
+                        <Button >{t('hire-me')}</Button>
                     </Link>
                 </div>
 

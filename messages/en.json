@@ -1,0 +1,42 @@
+{
+    "Index": {
+        "title": "Hello world!"
+    },
+    "Nav":{
+        "home": "Home",
+        "services": "Services",
+        "resume": "Resume",
+        "work": "Work",
+        "contact": "Contact",
+        "hire-me": "Hire me"
+    },
+    "Home":{
+        "rol": "Software Developer",
+        "greeting": "Hello I´m",
+        "professional-profile": "I excel at crafting elegant digital experiences and I am proficient in various programming languages and technologies",
+        "button-cv":"Download CV"   
+    },
+    "Stats":{
+        "years-experience":"Years of experience",
+        "projects-completed":"Projects completed",
+        "technologies-mastered":"Technologies mastered",
+        "code-commits":"Code commits"
+    },
+    "HeroContent":{
+        "about-me": "About me",
+        "skills": "Skills",
+        "projects": "Projects"
+    },
+    "Language":{
+        "english": "English",
+        "spanish": "Spanish"
+    },
+    "Footer":{
+        "community":"Community",
+        "social-media": "Social Media",
+        "about":"About",
+        "sponsor": "Become Sponsor",
+        "contact-me": "Contact Me",
+        "rights-reserved":"Mj Aristizabal Dev 2024. All rights reserved"
+    }
+}
