@@ -1,27 +1,31 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import CountUp from "react-countup";
 
-const stats = [
-    {
-        num: 12,
-        text: "Years of experience"
-    },
-    {
-        num: 26,
-        text: "Projects completed"
-    },
-    {
-        num: 8,
-        text: "Technologies mastered"
-    },
-    {
-        num: 500,
-        text: "Code commits"
-    }
-]
 
 const Stats = () => {
+    const t = useTranslations('Stats')
+
+    const stats = [
+        {
+            num: 12,
+            text: (t('years-experience'))
+        },
+        {
+            num: 26,
+            text: (t('projects-completed'))
+        },
+        {
+            num: 8,
+            text: (t('technologies-mastered'))
+        },
+        {
+            num: 500,
+            text: (t('code-commits'))
+        }
+    ]
+
     return (
         <section className="pt-4 pb-12 xl:pt-0 xl:pb-0">
             <div className="container mx-auto">

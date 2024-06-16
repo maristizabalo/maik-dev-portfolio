@@ -1,34 +1,36 @@
 "use client";
 
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const links = [
-    {
-        name: "home",
-        path: "/",
-    },
-    {
-        name: "services",
-        path: "/services",
-    },
-    {
-        name: "resume",
-        path: "/resume",
-    },
-    {
-        name: "work",
-        path: "/work",
-    },
-    {
-        name: "contact",
-        path: "/contact",
-    },
-]
 
 const Nav = () => {
+    const locale = useLocale()
     const pathname = usePathname();
-
+    const t = useTranslations('Nav')
+    const links = [
+        {
+            name: "home",
+            path: `/${locale}`,
+        },
+        {
+            name: "services",
+            path: `/${locale}/services`,
+        },
+        {
+            name: "resume",
+            path: `/${locale}/resume`,
+        },
+        {
+            name: "work",
+            path: `/${locale}/work`,
+        },
+        {
+            name: "contact",
+            path: `/${locale}/contact`,
+        },
+    ]
     return (
         <nav className="flex gap-8">
             {links.map((link, index) => {
@@ -40,7 +42,7 @@ const Nav = () => {
                             link.path === pathname && "text-accent border-b-2 border-accent"
                         } capitalize font-medium hover:text-accent transition-all`}
                     >
-                        {link.name}
+                        {t(`${link.name}`)}
                     </Link>
                 )
             })}
