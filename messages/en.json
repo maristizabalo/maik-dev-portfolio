@@ -1,7 +1,4 @@
 {
-    "Index": {
-        "title": "Hello world!"
-    },
     "Nav":{
         "home": "Home",
         "services": "Services",
@@ -21,22 +18,6 @@
         "projects-completed":"Projects completed",
         "technologies-mastered":"Technologies mastered",
         "code-commits":"Code commits"
-    },
-    "HeroContent":{
-        "about-me": "About me",
-        "skills": "Skills",
-        "projects": "Projects"
-    },
-    "Language":{
-        "english": "English",
-        "spanish": "Spanish"
-    },
-    "Footer":{
-        "community":"Community",
-        "social-media": "Social Media",
-        "about":"About",
-        "sponsor": "Become Sponsor",
-        "contact-me": "Contact Me",
-        "rights-reserved":"Mj Aristizabal Dev 2024. All rights reserved"
     }
 }
+
