@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 //Components
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const Header = () => {
     const t = useTranslations('Nav')
@@ -25,6 +26,7 @@ const Header = () => {
                     <Link href="/contact">
                         <Button >{t('hire-me')}</Button>
                     </Link>
+                    <ThemeSwitcher />
                 </div>
 
                 {/* mobile nav */}

@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci"
 import { useLocale, useTranslations } from "next-intl";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 
 const MobileNav = () => {
@@ -49,6 +50,7 @@ const MobileNav = () => {
               <span className="text-accent">.</span>
             </h1>
           </Link>
+          <ThemeSwitcher />
         </div>
 
         {/* nav */}

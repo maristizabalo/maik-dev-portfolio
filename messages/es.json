@@ -1,7 +1,4 @@
 {
-    "Index": {
-        "title": "Hola Mundo!"
-    },
     "Nav":{
         "home": "Inicio",
         "services": "Servicios",
@@ -21,17 +18,5 @@
         "projects-completed":"Proyectos completados",
         "technologies-mastered":"Tecnologías dominadas",
         "code-commits":"Commits de código"
-    },
-    "Language":{
-        "english": "Ingles",
-        "spanish": "Español"
-    },
-    "Footer":{
-        "community":"Comunidad",
-        "social-media": "Redes Sociales",
-        "about":"Acerca de",
-        "sponsor": "Conviértete en patrocinador",
-        "contact-me": "Contacta conmigo",
-        "rights-reserved":"Mj Aristizabal Dev 2024. Todos los derechos reservados"
     }
 }
