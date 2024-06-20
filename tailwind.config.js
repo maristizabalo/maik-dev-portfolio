@@ -33,8 +33,8 @@ module.exports = {
         textLight: "#222222",
         textSecLight: "#555555",
         accentLight: {
-          DEFAULT: '#00D0FF',
-          hover: '#E9F5FF',
+          DEFAULT: '#1E40AF',
+          hover: '#000E3D',
         },
         accent: {
           DEFAULT: '#00E0FF',

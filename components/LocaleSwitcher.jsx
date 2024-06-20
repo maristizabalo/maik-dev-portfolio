@@ -14,7 +14,9 @@ const LocaleSwitcher = () => {
                 
             })
         } else if(locale === "es"){
-            setTheme("light")
+            startTransition(() => {
+                
+            })
         }
     }
 

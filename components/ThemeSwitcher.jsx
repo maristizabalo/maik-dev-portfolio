@@ -30,7 +30,7 @@ const ThemeSwitcher = () => {
             <Switch
                 defaultSelected
                 size='lg'
-                color='primary'
+                color='secondary'
                 onClick={handleTheme}
                 startContent={<CiLight />}
                 endContent={<CiDark />}
