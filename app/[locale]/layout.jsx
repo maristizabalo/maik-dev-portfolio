@@ -33,11 +33,11 @@ export default function RootLayout({ children }) {
             disableTransitionOnChange
           >
             <Header />
-            <StairTransition />
+            {/* <StairTransition /> */}
             {/* <StarsCanvas /> */}
-            <PageTransition>
+            {/* <PageTransition> */}
               {children}
-            </PageTransition>
+            {/* </PageTransition> */}
           </Providers>
         </NextIntlClientProvider>
       </body>

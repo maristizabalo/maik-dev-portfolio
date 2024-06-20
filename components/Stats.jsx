@@ -9,19 +9,19 @@ const Stats = () => {
 
     const stats = [
         {
-            num: 12,
+            num: 6,
             text: (t('years-experience'))
         },
         {
-            num: 26,
+            num: 7,
             text: (t('projects-completed'))
         },
         {
-            num: 8,
+            num: 5,
             text: (t('technologies-mastered'))
         },
         {
-            num: 500,
+            num: 584,
             text: (t('code-commits'))
         }
     ]
