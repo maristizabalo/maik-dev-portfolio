@@ -1,4 +1,4 @@
-const {nextui} = require("@nextui-org/react");
+const { nextui } = require("@nextui-org/react");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -28,6 +28,14 @@ module.exports = {
     extend: {
       colors: {
         primary: '#030014',
+        bgDark: '#030014',
+        bgLight: '#F5F5F5',
+        textLight: "#222222",
+        textSecLight: "#555555",
+        accentLight: {
+          DEFAULT: '#1E40AF',
+          hover: '#000E3D',
+        },
         accent: {
           DEFAULT: '#00E0FF',
           hover: '#00BFDA',

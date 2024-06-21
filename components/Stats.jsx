@@ -9,19 +9,19 @@ const Stats = () => {
 
     const stats = [
         {
-            num: 12,
+            num: 6,
             text: (t('years-experience'))
         },
         {
-            num: 26,
+            num: 7,
             text: (t('projects-completed'))
         },
         {
-            num: 8,
+            num: 5,
             text: (t('technologies-mastered'))
         },
         {
-            num: 500,
+            num: 584,
             text: (t('code-commits'))
         }
     ]
@@ -40,10 +40,10 @@ const Stats = () => {
                                     end={item.num}
                                     duration={5}
                                     delay={2}
-                                    className="text-4xl xl:text-6xl font-extrabold"
+                                    className="text-4xl xl:text-6xl font-extrabold dark:text-white"
                                 />
                                 <p 
-                                className={`${item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"} leading-snug text-white/80`}
+                                className={`${item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"} leading-snug dark:text-white/80`}
                                 >
                                     {item.text}
                                     </p>

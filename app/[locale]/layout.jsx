@@ -24,20 +24,20 @@ export default function RootLayout({ children }) {
   const messages = useMessages();
   return (
     <html lang={locale}>
-      <body className={jetbrainsMono.variable}>
+      <body className={`${jetbrainsMono.variable} dark:bg-primary`}>
         <NextIntlClientProvider messages={messages}>
           <Providers
             attribute="class"
-            defaultTheme="dark"
+            defaultTheme="light"
             enableSystem
             disableTransitionOnChange
           >
             <Header />
-            <StairTransition />
+            {/* <StairTransition /> */}
             {/* <StarsCanvas /> */}
-            <PageTransition>
+            {/* <PageTransition> */}
               {children}
-            </PageTransition>
+            {/* </PageTransition> */}
           </Providers>
         </NextIntlClientProvider>
       </body>
