@@ -5,7 +5,7 @@
 
 @layer base {
     body{
-        @apply font-primary bg-bgLight text-black leading-loose;
+        @apply font-primary bg-bgLight dark:bg-primary text-black leading-loose;
     }
     .h1 {
         @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
