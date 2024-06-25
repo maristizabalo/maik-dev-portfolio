@@ -6,7 +6,7 @@ import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 import StarsCanvas from "@/components/StarBackground";
 import { NextIntlClientProvider, useLocale, useMessages } from "next-intl";
-import Providers from "@/components/theme-provider";
+import Providers from "@/components/Providers";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -24,11 +24,11 @@ export default function RootLayout({ children }) {
   const messages = useMessages();
   return (
     <html lang={locale}>
-      <body className={`${jetbrainsMono.variable} dark:bg-primary`}>
+      <body className={`${jetbrainsMono.variable}`}>
         <NextIntlClientProvider messages={messages}>
           <Providers
             attribute="class"
-            defaultTheme="light"
+            defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
