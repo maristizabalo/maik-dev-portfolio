@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
           >
             <Header />
             {/* <StairTransition /> */}
-            <StarsCanvas />
+            {/* <StarsCanvas /> */}
             {/* <PageTransition> */}
               {children}
             {/* </PageTransition> */}

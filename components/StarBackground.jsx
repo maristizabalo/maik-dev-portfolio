@@ -41,7 +41,7 @@ const StarBackground = (props) => {
 
 const StarsCanvas = () => (
     <div className='w-full h-auto z-[-1]'> {/* Z-index ajustado */}
-        <Canvas camera={{ position: [0, 0, 1] }} style={{ pointerEvents: 'none' }}>
+        <Canvas camera={{ position: [0, 0, 1] }} style={{ pointerEvents: 'all' }}>
             <Suspense fallback={null}>
                 <StarBackground />
             </Suspense>
