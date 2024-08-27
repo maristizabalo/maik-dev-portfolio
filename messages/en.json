@@ -18,6 +18,14 @@
         "projects-completed":"Projects completed",
         "technologies-mastered":"Technologies mastered",
         "code-commits":"Code commits"
-    }
+    },
+    "Services":[{
+              "num": "01",
+              "title": "Web Development",
+              "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+              "href": ""
+            }]
+            
+    
 }
 

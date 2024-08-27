@@ -15,7 +15,9 @@ const PageTransition = ({ children }) => {
                         opacity: 0,
                         transition: { 
                             delay: 1, 
-                            duration: 0.4, 
+                            delay: 2.4,
+          duration: 0.1,
+          ease: "easeIn" 
                             ease: "easeInOut" 
                         }
                     }}

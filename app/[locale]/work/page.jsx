@@ -65,7 +65,7 @@ const Work = () => {
         transition:
         {
           delay: 2.4,
-          duration: 0.4,
+          duration: 0.1,
           ease: "easeIn"
         },
       }}
