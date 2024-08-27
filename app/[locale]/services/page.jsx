@@ -3,40 +3,14 @@
 import { BsArrowDownRight } from 'react-icons/bs'
 import Link from 'next/link'
 
-const services = [
-  {
-    num: '01',
-    title: 'Web Development',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    href: ''
-  },
-  {
-    num: '02',
-    title: 'Data Analysys',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    href: ''
-  },
-  {
-    num: '03',
-    title: 'Gen AI',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    href: ''
-  },
-  {
-    num: '04',
-    title: 'Python',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    href: ''
-  },
 
-]
 
 import { motion } from "framer-motion";
 import { useTranslations } from 'next-intl';
 
 
 const Services = () => {
-  const t = useTranslations('Home')
+  const t = useTranslations('Services')
   return (
     <section className='min-h-[80vh] flex flex-col justify-center py-8 xl:py-0'>
       <div className="dark:text-white container mx-auto">
@@ -48,13 +22,13 @@ const Services = () => {
           }}
           className='grid grid-cols-1 md:grid-cols-2 gap-[60px]'
         >
-          {services.map((service, index) => {
+          {[1,2,3,4].map((index) => {
             return (
               <div key={index} className='flex-1 flex flex-col justify-center gap-6 group'>
                 {/* top */}
                 <div className='w-full flex justify-between items-center'>
-                  <div className='text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500'>{service.num}</div>
-                  <Link href={service.href}
+                  <div className='text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500'>{t(`num0${index}`)}</div>
+                  <Link href={t(`href0${index}`)}
                     className='w-[70px] h-[70px] rounded-full bg-white group-hover:bg-amber-500 transition-all duration-500 flex justify-center items-center hover:-rotate-45'
                   >
                     <BsArrowDownRight
@@ -65,11 +39,11 @@ const Services = () => {
 
                 {/* title */}
                 <h2 className='text-[42px] font-bold leading-none text-white group-hover:text-yellow-600 transition-all duration-500 '>
-                  {service.title}
+                  {t(`title0${index}`)}
                 </h2>
 
                 {/* description */}
-                <p className='text-white/60 '>{service.description}</p>
+                <p className='text-white/60 '>{t(`description0${index}`)}</p>
 
                 {/* border */}
                 <div className='border-b border-white/20 w-full'></div>

@@ -1,5 +1,5 @@
 {
-    "Nav":{
+    "Nav": {
         "home": "Home",
         "services": "Services",
         "resume": "Resume",
@@ -7,25 +7,34 @@
         "contact": "Contact",
         "hire-me": "Hire me"
     },
-    "Home":{
+    "Home": {
         "rol": "Software Developer",
         "greeting": "Hello I´m",
         "professional-profile": "I excel at crafting elegant digital experiences and I am proficient in various programming languages and technologies",
-        "button-cv":"Download CV"   
+        "button-cv": "Download CV"
     },
-    "Stats":{
-        "years-experience":"Years of experience",
-        "projects-completed":"Projects completed",
-        "technologies-mastered":"Technologies mastered",
-        "code-commits":"Code commits"
+    "Stats": {
+        "years-experience": "Years of experience",
+        "projects-completed": "Projects completed",
+        "technologies-mastered": "Technologies mastered",
+        "code-commits": "Code commits"
     },
-    "Services":[{
-              "num": "01",
-              "title": "Web Development",
-              "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-              "href": ""
-            }]
-            
-    
+    "Services": {
+        "num01": "01",
+        "title01": "Full Stack Development",
+        "description01": "I offer comprehensive web development services, from front-end to back-end, using modern technologies to create scalable and efficient applications.",
+        "href01": "",
+        "num02": "02",
+        "title02": "Machine Learning & AI",
+        "description02": "I am constantly learning and applying machine learning and artificial intelligence techniques to develop predictive models and automated solutions.",
+        "href02": "",
+        "num03": "03",
+        "title03": "Data Analysis with Power BI",
+        "description03": "Expert in data manipulation and visualization using Power BI to transform complex data into interactive and easy-to-understand reports.",
+        "href03": "",
+        "num04": "04",
+        "title04": "Python Development",
+        "description04": "With extensive knowledge in Python, I develop customized solutions, from process automation to API creation and data analysis.",
+        "href04": ""
+    }
 }
-
