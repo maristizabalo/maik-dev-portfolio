@@ -1,14 +1,29 @@
+"use client"
+
 import Photo from "@/components/Photo"
 import Social from "@/components/Social"
 import Stats from "@/components/Stats"
 import { Button } from "@/components/ui/button"
 import { useTranslations } from "next-intl"
 import { FiDownload } from 'react-icons/fi'
+import { motion } from "framer-motion";
 
 const Home = () => {
   const t = useTranslations('Home')
   return (
-    <section className="h-full">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition:
+        {
+          delay: 0.3,
+          duration: 0.2,
+          ease: "easeIn"
+        },
+      }}
+      className="h-full"
+      >
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
@@ -46,7 +61,7 @@ const Home = () => {
         </div>
       </div>
       <Stats />
-    </section>
+    </motion.section>
   )
 }
 

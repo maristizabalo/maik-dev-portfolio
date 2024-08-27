@@ -64,8 +64,8 @@ const Work = () => {
         opacity: 1,
         transition:
         {
-          delay: 2.4,
-          duration: 0.1,
+          delay: 0.3,
+          duration: 0.2,
           ease: "easeIn"
         },
       }}
