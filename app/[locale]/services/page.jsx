@@ -29,7 +29,7 @@ const Services = () => {
                 <div className='w-full flex justify-between items-center'>
                   <div className='text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500'>{t(`num0${index}`)}</div>
                   <Link href={t(`href0${index}`)}
-                    className='w-[70px] h-[70px] rounded-full bg-white group-hover:bg-amber-500 transition-all duration-500 flex justify-center items-center hover:-rotate-45'
+                    className='w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45'
                   >
                     <BsArrowDownRight
                       className='text-primary text-3xl'
@@ -38,7 +38,7 @@ const Services = () => {
                 </div>
 
                 {/* title */}
-                <h2 className='text-[42px] font-bold leading-none text-white group-hover:text-yellow-600 transition-all duration-500 '>
+                <h2 className='text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 '>
                   {t(`title0${index}`)}
                 </h2>
 
