@@ -12,7 +12,7 @@ const Header = () => {
     const t = useTranslations('Nav')
 
     return (
-        <header className="py-8 xl:py-12 dark:text-white">
+        <header className="xl:py-6 dark:text-white">
             <div className="container mx-auto flex justify-between items-center">
                 {/* logo */}
                 <Link href="/">
