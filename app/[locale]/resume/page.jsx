@@ -1,6 +1,6 @@
 "use client";
 
-import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaPython, FaDocker, FaPhp } from 'react-icons/fa'
+import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaPython, FaDocker, FaPhp, FaVuejs } from 'react-icons/fa'
 import { SiTailwindcss, SiNextdotjs } from 'react-icons/si'
 
 //about data
@@ -115,6 +115,10 @@ const skills = {
     {
       icon: <FaReact />,
       name: 'react.js'
+    },
+    {
+      icon: <FaVuejs />,
+      name: 'vue.js'
     },
     {
       icon: <FaPython />,
