@@ -18,7 +18,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "4+ Years"
+      fieldValue: "5+ Years"
     },
     {
       fieldName: "Nationality",
@@ -46,43 +46,13 @@ const about = {
 //experience data
 const experience = {
   icon: '/assets/resume/badge.svg',
-  title: 'My ecpereince',
+  title: 'My Experience',
   description: 'Esta es una descipcion a lo largod emi expereincia profesional como Desarrollador de software e ingeniero de datos.',
   items: [
     {
       company: "DADEP",
       position: "Software Developer",
-      duration: "2022 - Presnet"
-    },
-    {
-      company: "Raddar Studios",
-      position: "Development Engineer",
-      duration: "2023 - 2023"
-    },
-    {
-      company: "INVERTAXI",
-      position: "Software Engineer",
-      duration: "2020 - 2022"
-    },
-    {
-      company: "DADEP",
-      position: "Software Developer",
-      duration: "2022 - Presnet"
-    },
-    {
-      company: "Raddar Studios",
-      position: "Development Engineer",
-      duration: "2023 - 2023"
-    },
-    {
-      company: "INVERTAXI",
-      position: "Software Engineer",
-      duration: "2020 - 2022"
-    },
-    {
-      company: "DADEP",
-      position: "Software Developer",
-      duration: "2022 - Presnet"
+      duration: "2022 - 2025"
     },
     {
       company: "Raddar Studios",
