@@ -36,5 +36,41 @@
         "title04": "Python Development",
         "description04": "With extensive knowledge in Python, I develop customized solutions, from process automation to API creation and data analysis.",
         "href04": ""
+    },
+    "Resume": {
+        "experience": "Experience",
+        "education": "Education",
+        "skills": "Skills",
+        "about-me": "About me",
+        
+        "experience-title": "My experience",
+        "experience-description": "Throughout my career, I have worked on various projects ranging from web application development to implementing artificial intelligence solutions. My focus has always been on creating high-quality software that meets client needs and enhances user experience.",
+        
+        "experienceCompany01": "DADEP",
+        "experiencePosition01": "Full Stack Developer",
+        "experienceTime01": "2022 - 2025",
+
+        "experienceCompany02": "Raddar Studios",
+        "experiencePosition02": "Software Engineer",
+        "experienceTime02": "2023 - 2023",
+
+        "experienceCompany03": "INVERTAXI",
+        "experiencePosition03": "Full Stack Developer",
+        "experienceTime03": "2020 - 2022",
+
+        "education-title": "My education",
+        "education-description": "I have a solid educational background in software engineering, which has provided me with the theoretical and practical knowledge necessary to excel in my field. I am committed to continuous learning and staying updated with the latest technologies.",
+    
+        "educationUniversity01": "SENA",
+        "educationDegree01": "Technologist in Analysis and Development of Information Systems",
+        "educationTime01": "2020 - 2022",
+
+        "educationUniversity02": "MinTIC and University of Antioquia",
+        "educationDegree02": "Diploma in Software Development",
+        "educationTime02": "2022 - 2022",
+
+        "educationUniversity03": "Google",
+        "educationDegree03": "Short Courses in Generative AI",
+        "educationTime03": "2024 - 2024"
     }
 }
