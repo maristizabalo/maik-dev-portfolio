@@ -71,6 +71,9 @@
 
         "educationUniversity03": "Google",
         "educationDegree03": "Short Courses in Generative AI",
-        "educationTime03": "2024 - 2024"
+        "educationTime03": "2024 - 2024",
+
+        "skills-title": "My skills",
+        "skills-description": "I possess a diverse set of skills that enable me to tackle complex challenges and deliver innovative solutions. My expertise includes web development, machine learning, data analysis, and more."
     }
 }

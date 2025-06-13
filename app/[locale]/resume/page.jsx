@@ -14,36 +14,8 @@ import {
 } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
-//education data
-const education = {
-  icon: "/assets/resume/cap.svg",
-  title: "My education",
-  description:
-    "Esta es una descipcion a lo largod emi expereincia profesional como Desarrollador de software e ingeniero de datos.",
-  items: [
-    {
-      institution: "SENA",
-      position: "Tecnologo en Analisis y Desarrollo de Sistemas de Informacion",
-      duration: "2020 - 2022",
-    },
-    {
-      institution: "MinTIC y Universidad de Antioquia",
-      position: "Diplomado en Desarrollo de Software",
-      duration: "2022 - 2022",
-    },
-    {
-      institution: "Google",
-      position: "Cursos cortos en IA Generativa",
-      duration: "2024 - 2024",
-    },
-  ],
-};
-
 //skills data
 const skills = {
-  title: "My Skills",
-  description:
-    "Una descricpion acerca de mis skills los cuales son abundantes y muchos",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -238,20 +210,18 @@ const Resume = () => {
             {/* skills */}
             <TabsContent value="skills" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <div>
-                  <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                    {skills.description}
-                  </p>
-                </div>
+                <h3 className="text-4xl font-bold">{t("skills-title")}</h3>
+                <p className="max-w-[600px] text-gray-800 dark:text-white/60 mx-auto xl:mx-0">
+                  {t("skills-description")}
+                </p>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
                   {skills.skillList.map((skill, index) => {
                     return (
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-500">
+                            <TooltipTrigger className="w-full h-[150px] bg-primary dark:bg-[#232329] rounded-xl flex justify-center items-center group">
+                              <div className="text-6xl text-white group-hover:text-accentLight dark:group-hover:text-accent transition-all duration-500">
                                 {skill.icon}
                               </div>
                             </TooltipTrigger>
