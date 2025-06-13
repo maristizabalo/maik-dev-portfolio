@@ -36,5 +36,24 @@
         "title04": "Python Development",
         "description04": "With extensive knowledge in Python, I develop customized solutions, from process automation to API creation and data analysis.",
         "href04": ""
+    },
+    "Resume": {
+        "experience": "Experience",
+        "education": "Education",
+        "skills": "Skills",
+        "about-me": "About me",
+        "experience-title": "My experience",
+        "experience-description": "Throughout my career, I have worked on various projects ranging from web application development to implementing artificial intelligence solutions. My focus has always been on creating high-quality software that meets client needs and enhances user experience.",
+        "experienceCompany01": "DADEP",
+        "experiencePosition01": "Full Stack Developer",
+        "experienceTime01": "2022 - 2025",
+
+        "experienceCompany02": "Raddar Studios",
+        "experiencePosition02": "Software Engineer",
+        "experienceTime02": "2023 - 2023",
+
+        "experienceCompany03": "INVERTAXI",
+        "experiencePosition03": "Full Stack Developer",
+        "experienceTime03": "2020 - 2022"
     }
 }

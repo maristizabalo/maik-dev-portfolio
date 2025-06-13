@@ -1,40 +1,60 @@
 {
-    "Nav": {
-        "home": "Inicio",
-        "services": "Servicios",
-        "resume": "Resumen",
-        "work": "Trabajo",
-        "contact": "Contacto",
-        "hire-me": "Contratar"
-    },
-    "Home": {
-        "rol": "Desarrollador de Software",
-        "greeting": "Hola, soy",
-        "professional-profile": "Me destaco en la creación de experiencias digitales elegantes y domino varios lenguajes y tecnologías de programación.",
-        "button-cv": "Descargar CV"
-    },
-    "Stats": {
-        "years-experience": "Años de experiencia",
-        "projects-completed": "Proyectos completados",
-        "technologies-mastered": "Tecnologías dominadas",
-        "code-commits": "Commits de código"
-    },
-    "Services": {
-        "num01": "01",
-        "title01": "Desarrollo Full Stack",
-        "description01": "Ofrezco servicios completos de desarrollo web, desde el front-end hasta el back-end, utilizando tecnologías modernas para crear aplicaciones escalables y eficientes.",
-        "href01": "",
-        "num02": "02",
-        "title02": "Machine Learning e IA",
-        "description02": "Estoy en constante aprendizaje y aplico técnicas de machine learning e inteligencia artificial para desarrollar modelos predictivos y soluciones automatizadas.",
-        "href02": "",
-        "num03": "03",
-        "title03": "Análisis de Datos con Power BI",
-        "description03": "Experto en la manipulación y visualización de datos utilizando Power BI para transformar datos complejos en informes interactivos y fáciles de entender.",
-        "href03": "",
-        "num04": "04",
-        "title04": "Desarrollo en Python",
-        "description04": "Con amplio conocimiento en Python, desarrollo soluciones personalizadas, desde automatización de procesos hasta creación de APIs y análisis de datos.",
-        "href04": ""
-    }
+  "Nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "resume": "Resumen",
+    "work": "Trabajo",
+    "contact": "Contacto",
+    "hire-me": "Contratar"
+  },
+  "Home": {
+    "rol": "Desarrollador de Software",
+    "greeting": "Hola, soy",
+    "professional-profile": "Me destaco en la creación de experiencias digitales elegantes y domino varios lenguajes y tecnologías de programación.",
+    "button-cv": "Descargar CV"
+  },
+  "Stats": {
+    "years-experience": "Años de experiencia",
+    "projects-completed": "Proyectos completados",
+    "technologies-mastered": "Tecnologías dominadas",
+    "code-commits": "Commits de código"
+  },
+  "Services": {
+    "num01": "01",
+    "title01": "Desarrollo Full Stack",
+    "description01": "Ofrezco servicios completos de desarrollo web, desde el front-end hasta el back-end, utilizando tecnologías modernas para crear aplicaciones escalables y eficientes.",
+    "href01": "",
+    "num02": "02",
+    "title02": "Machine Learning e IA",
+    "description02": "Estoy en constante aprendizaje y aplico técnicas de machine learning e inteligencia artificial para desarrollar modelos predictivos y soluciones automatizadas.",
+    "href02": "",
+    "num03": "03",
+    "title03": "Análisis de Datos con Power BI",
+    "description03": "Experto en la manipulación y visualización de datos utilizando Power BI para transformar datos complejos en informes interactivos y fáciles de entender.",
+    "href03": "",
+    "num04": "04",
+    "title04": "Desarrollo en Python",
+    "description04": "Con amplio conocimiento en Python, desarrollo soluciones personalizadas, desde automatización de procesos hasta creación de APIs y análisis de datos.",
+    "href04": ""
+  },
+  "Resume": {
+    "experience": "Experiencia",
+    "education": "Educación",
+    "skills": "Habilidades",
+    "about-me": "Acerca de mí",
+    "experience-title": "Mi experiencia",
+    "experience-description": "A lo largo de mi carrera, he trabajado en diversos proyectos que abarcan desde el desarrollo de aplicaciones web hasta la implementación de soluciones de inteligencia artificial. Mi enfoque siempre ha sido crear software de alta calidad que satisfaga las necesidades del cliente y mejore la experiencia del usuario.",
+    
+    "experienceCompany01": "DADEP",
+    "experiencePosition01": "Desarrollador Full Stack",
+    "experienceTime01": "2022 - 2025",
+
+    "experienceCompany02": "Raddar Studios",
+    "experiencePosition02": "Ingeniero de Software",
+    "experienceTime02": "2023 - 2023",
+
+    "experienceCompany03": "INVERTAXI",
+    "experiencePosition03": "Desarrollador Full Stack",
+    "experienceTime03": "2020 - 2022"
+  }
 }
