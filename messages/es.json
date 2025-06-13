@@ -42,9 +42,10 @@
     "education": "Educación",
     "skills": "Habilidades",
     "about-me": "Acerca de mí",
+
     "experience-title": "Mi experiencia",
     "experience-description": "A lo largo de mi carrera, he trabajado en diversos proyectos que abarcan desde el desarrollo de aplicaciones web hasta la implementación de soluciones de inteligencia artificial. Mi enfoque siempre ha sido crear software de alta calidad que satisfaga las necesidades del cliente y mejore la experiencia del usuario.",
-    
+
     "experienceCompany01": "DADEP",
     "experiencePosition01": "Desarrollador Full Stack",
     "experienceTime01": "2022 - 2025",
@@ -55,6 +56,21 @@
 
     "experienceCompany03": "INVERTAXI",
     "experiencePosition03": "Desarrollador Full Stack",
-    "experienceTime03": "2020 - 2022"
-  }
+    "experienceTime03": "2020 - 2022",
+
+    "education-title": "Mi educación",
+    "education-description": "Mi formación académica incluye una sólida base en ciencias de la computación y desarrollo de software, complementada con cursos especializados en tecnologías emergentes y metodologías ágiles.",
+
+    "educationUniversity01": "SENA",
+    "educationDegree01": "Tecnólogo en Análisis y Desarrollo de Sistemas de Información",
+    "educationTime01": "2020 - 2022",
+
+    "educationUniversity02": "MinTIC y Universidad de Antioquia",
+    "educationDegree02": "Diplomado en Desarrollo de Software",
+    "educationTime02": "2022 - 2022",
+
+    "educationUniversity03": "Google",
+    "educationDegree03": "Cursos cortos en IA Generativa",
+    "educationTime03": "2024 - 2024"
+}
 }

@@ -14,71 +14,6 @@ import {
 } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
-//about data
-const about = {
-  title: "About me",
-  description: "Esta es una breve descripcion mia",
-  info: [
-    {
-      fieldName: "Name",
-      fieldValue: "Maicol Aristizabal",
-    },
-    {
-      fieldName: "Phone",
-      fieldValue: "(+57) 310 689 04 60",
-    },
-    {
-      fieldName: "Experience",
-      fieldValue: "5+ Years",
-    },
-    {
-      fieldName: "Nationality",
-      fieldValue: "Colombian",
-    },
-    {
-      fieldName: "Nationality",
-      fieldValue: "Colombian",
-    },
-    {
-      fieldName: "Email",
-      fieldValue: "maristizabalo95@gmail.com",
-    },
-    {
-      fieldName: "Freelance",
-      fieldValue: "Available",
-    },
-    {
-      fieldName: "Languages",
-      fieldValue: "Spanish, English",
-    },
-  ],
-};
-
-//experience data
-const experience = {
-  icon: "/assets/resume/badge.svg",
-  title: "My Experience",
-  description:
-    "Esta es una descipcion a lo largod emi expereincia profesional como Desarrollador de software e ingeniero de datos.",
-  items: [
-    {
-      company: "DADEP",
-      position: "Software Developer",
-      duration: "2022 - 2025",
-    },
-    {
-      company: "Raddar Studios",
-      position: "Development Engineer",
-      duration: "2023 - 2023",
-    },
-    {
-      company: "INVERTAXI",
-      position: "Software Engineer",
-      duration: "2020 - 2022",
-    },
-  ],
-};
-
 //education data
 const education = {
   icon: "/assets/resume/cap.svg",
@@ -157,6 +92,45 @@ const skills = {
   ],
 };
 
+const about = {
+  title: "About me",
+  description: "Esta es una breve descripcion mia",
+  info: [
+    {
+      fieldName: "Name",
+      fieldValue: "Maicol Aristizabal",
+    },
+    {
+      fieldName: "Phone",
+      fieldValue: "(+57) 310 689 04 60",
+    },
+    {
+      fieldName: "Experience",
+      fieldValue: "5+ Years",
+    },
+    {
+      fieldName: "Nationality",
+      fieldValue: "Colombian",
+    },
+    {
+      fieldName: "Nationality",
+      fieldValue: "Colombian",
+    },
+    {
+      fieldName: "Email",
+      fieldValue: "maristizabalo95@gmail.com",
+    },
+    {
+      fieldName: "Freelance",
+      fieldValue: "Available",
+    },
+    {
+      fieldName: "Languages",
+      fieldValue: "Spanish, English",
+    },
+  ],
+};
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Tooltip,
@@ -230,30 +204,32 @@ const Resume = () => {
             {/* education */}
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {education.description}
+                <h3 className="text-4xl font-bold">{t("education-title")}</h3>
+                <p className="max-w-[600px] text-gray-800 dark:text-white/60 mx-auto xl:mx-0">
+                  {t("education-description")}
                 </p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {education.items.map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
-                        >
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
-                            {item.position}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            {/* dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.institution}</p>
-                          </div>
-                        </li>
-                      );
-                    })}
+                    {[1, 2, 3].map((index) => (
+                      <li
+                        key={index}
+                        className="bg-primary dark:bg-[#232329] h-[250px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                      >
+                        <span className="text-accentLight dark:text-accent">
+                          {t(`educationTime0${index}`)}
+                        </span>
+                        <h3 className="text-white text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          {t(`educationDegree0${index}`)}
+                        </h3>
+                        <div className="flex items-center gap-3">
+                          {/* dot */}
+                          <span className="w-[6px] h-[6px] rounded-full bg-accentLight dark:bg-accent"></span>
+                          <p className="text-white/60">
+                            {t(`educationUniversity0${index}`)}
+                          </p>
+                        </div>
+                      </li>
+                    ))}
                   </ul>
                 </ScrollArea>
               </div>
