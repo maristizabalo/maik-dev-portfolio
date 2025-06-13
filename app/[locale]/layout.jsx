@@ -17,6 +17,9 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata = {
   title: "Mj Aristizabal",
   description: "My portfolio",
+  icons: {
+    icon: '/maletin.png', // ubicado en la carpeta /public
+  },
 };
 
 export default function RootLayout({ children }) {
