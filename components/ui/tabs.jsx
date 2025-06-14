@@ -30,8 +30,8 @@ const TabsTrigger = React.forwardRef(({ className, ...props }, ref) => (
       bg-primary dark:bg-[#27272c] 
       text-white 
 
-      data-[state=active]:bg-yellow-500 
-      dark:data-[state=active]:bg-yellow-400
+      data-[state=active]:bg-accent
+      dark:data-[state=active]:bg-accent
       data-[state=active]:text-primary 
       data-[state=active]:font-bold 
       data-[state=active]:shadow-xl

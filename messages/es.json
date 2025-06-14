@@ -71,6 +71,33 @@
 
     "educationUniversity03": "Google",
     "educationDegree03": "Cursos cortos en IA Generativa",
-    "educationTime03": "2024 - 2024"
-}
+    "educationTime03": "2024 - 2024",
+
+    "skills-title": "Mis habilidades",
+    "skills-description": "Tengo un conjunto diverso de habilidades técnicas que abarcan desde el desarrollo web hasta la inteligencia artificial. Estoy siempre aprendiendo y adaptándome a nuevas tecnologías para ofrecer soluciones innovadoras.",
+
+    "about-me-title": "Acerca de mí",
+    "about-me-description": "Soy un apasionado del desarrollo de software con un enfoque en la creación de soluciones eficientes y escalables. Me encanta enfrentar desafíos técnicos y aprender continuamente para mejorar mis habilidades. Mi objetivo es contribuir al éxito de los proyectos en los que participo, siempre buscando la excelencia en cada línea de código.",
+
+    "profileTitle01": "Nombre",
+    "profileValue01": "Maicol Aristizabal",
+
+    "profileTitle02": "Teléfono",
+    "profileValue02": "(+57) 310 689 04 60",
+
+    "profileTitle03": "Experiencia",
+    "profileValue03": "Más de 5 años",
+
+    "profileTitle04": "Nacionalidad",
+    "profileValue04": "Colombiano",
+
+    "profileTitle05": "Correo electrónico",
+    "profileValue05": "maristizabalo95@gmail.com",
+
+    "profileTitle06": "Freelance",
+    "profileValue06": "Disponible",
+
+    "profileTitle07": "Idiomas",
+    "profileValue07": "Español, Inglés"
+  }
 }

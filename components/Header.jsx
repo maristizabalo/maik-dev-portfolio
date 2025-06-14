@@ -17,7 +17,7 @@ const Header = () => {
                 {/* logo */}
                 <Link href="/">
                     <h1 className="text-4xl font-semibold">
-                        Maicol <span className="text-accentLight dark:text-accent">.</span>
+                        Maicol <span className="text-accent dark:text-accent">.</span>
                     </h1>
                 </Link>
 

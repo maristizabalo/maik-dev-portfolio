@@ -14,36 +14,8 @@ import {
 } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
-//education data
-const education = {
-  icon: "/assets/resume/cap.svg",
-  title: "My education",
-  description:
-    "Esta es una descipcion a lo largod emi expereincia profesional como Desarrollador de software e ingeniero de datos.",
-  items: [
-    {
-      institution: "SENA",
-      position: "Tecnologo en Analisis y Desarrollo de Sistemas de Informacion",
-      duration: "2020 - 2022",
-    },
-    {
-      institution: "MinTIC y Universidad de Antioquia",
-      position: "Diplomado en Desarrollo de Software",
-      duration: "2022 - 2022",
-    },
-    {
-      institution: "Google",
-      position: "Cursos cortos en IA Generativa",
-      duration: "2024 - 2024",
-    },
-  ],
-};
-
 //skills data
 const skills = {
-  title: "My Skills",
-  description:
-    "Una descricpion acerca de mis skills los cuales son abundantes y muchos",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -181,7 +153,7 @@ const Resume = () => {
                         key={index}
                         className="bg-primary dark:bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                       >
-                        <span className="text-accentLight dark:text-accent">
+                        <span className="text-accent dark:text-accent">
                           {t(`experienceTime0${index}`)}
                         </span>
                         <h3 className="text-white text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
@@ -189,7 +161,7 @@ const Resume = () => {
                         </h3>
                         <div className="flex items-center gap-3">
                           {/* dot */}
-                          <span className="w-[6px] h-[6px] rounded-full bg-accentLight dark:bg-accent"></span>
+                          <span className="w-[6px] h-[6px] rounded-full bg-accent dark:bg-accent"></span>
                           <p className="text-white/60">
                             {t(`experienceCompany0${index}`)}
                           </p>
@@ -215,7 +187,7 @@ const Resume = () => {
                         key={index}
                         className="bg-primary dark:bg-[#232329] h-[250px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                       >
-                        <span className="text-accentLight dark:text-accent">
+                        <span className="text-accent dark:text-accent">
                           {t(`educationTime0${index}`)}
                         </span>
                         <h3 className="text-white text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
@@ -223,7 +195,7 @@ const Resume = () => {
                         </h3>
                         <div className="flex items-center gap-3">
                           {/* dot */}
-                          <span className="w-[6px] h-[6px] rounded-full bg-accentLight dark:bg-accent"></span>
+                          <span className="w-[6px] h-[6px] rounded-full bg-accent dark:bg-accent"></span>
                           <p className="text-white/60">
                             {t(`educationUniversity0${index}`)}
                           </p>
@@ -238,20 +210,18 @@ const Resume = () => {
             {/* skills */}
             <TabsContent value="skills" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <div>
-                  <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                    {skills.description}
-                  </p>
-                </div>
+                <h3 className="text-4xl font-bold">{t("skills-title")}</h3>
+                <p className="max-w-[600px] text-gray-800 dark:text-white/60 mx-auto xl:mx-0">
+                  {t("skills-description")}
+                </p>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
                   {skills.skillList.map((skill, index) => {
                     return (
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-500">
+                            <TooltipTrigger className="w-full h-[150px] bg-primary dark:bg-[#232329] rounded-xl flex justify-center items-center group">
+                              <div className="text-6xl text-white group-hover:text-accent dark:group-hover:text-accent transition-all duration-500">
                                 {skill.icon}
                               </div>
                             </TooltipTrigger>
@@ -273,22 +243,25 @@ const Resume = () => {
               className="w-full text-center xl:text-left"
             >
               <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {about.description}
+                <h3 className="text-4xl font-bold">{t("about-me-title")}</h3>
+                <p className="max-w-[600px] text-gray-800 dark:text-white/60 mx-auto xl:mx-0">
+                  {t("about-me-description")}
                 </p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                  {about.info.map((item, index) => {
-                    return (
-                      <li
-                        key={index}
-                        className="flex items-center justify-center xl:justify-start gap-4"
-                      >
-                        <span className="text-white/60">{item.fieldName}</span>
-                        <span className="text-xl">{item.fieldValue}</span>
-                      </li>
-                    );
-                  })}
+
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-4 max-w-[700px] xl:mx-0 mx-auto">
+                  {[1, 2, 3, 4, 5, 6, 7].map((index) => (
+                    <li
+                      key={index}
+                      className="flex justify-between items-center bg-primary dark:bg-[#2d2d2d] border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-3 shadow-sm"
+                    >
+                      <span className="text-sm font-medium text-gray-400 dark:text-gray-400 whitespace-nowrap">
+                        {t(`profileTitle0${index}`)}
+                      </span>
+                      <span className="text-base font-semibold text-white text-right break-all max-w-[65%]">
+                        {t(`profileValue0${index}`)}
+                      </span>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </TabsContent>

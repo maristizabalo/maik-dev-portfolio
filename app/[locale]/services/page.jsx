@@ -33,7 +33,7 @@ const Services = () => {
                     href={t(`href0${index}`)}
                     className="w-[70px] h-[70px] rounded-full 
                               bg-gray-300 dark:bg-white 
-                              group-hover:bg-accentLight dark:group-hover:bg-accent 
+                              group-hover:bg-accent dark:group-hover:bg-accent 
                               transition-all duration-500 
                               flex justify-center items-center hover:-rotate-45"
                   >
@@ -45,7 +45,7 @@ const Services = () => {
                 <h2
                   className="text-[42px] font-bold leading-none 
                             text-primary dark:text-white 
-                            group-hover:text-accentLight dark:group-hover:text-accent 
+                            group-hover:text-accent dark:group-hover:text-accent 
                             transition-all duration-500"
                 >
                   {t(`title0${index}`)}
