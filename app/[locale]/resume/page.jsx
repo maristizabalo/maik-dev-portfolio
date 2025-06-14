@@ -153,7 +153,7 @@ const Resume = () => {
                         key={index}
                         className="bg-primary dark:bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                       >
-                        <span className="text-accentLight dark:text-accent">
+                        <span className="text-accent dark:text-accent">
                           {t(`experienceTime0${index}`)}
                         </span>
                         <h3 className="text-white text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
@@ -161,7 +161,7 @@ const Resume = () => {
                         </h3>
                         <div className="flex items-center gap-3">
                           {/* dot */}
-                          <span className="w-[6px] h-[6px] rounded-full bg-accentLight dark:bg-accent"></span>
+                          <span className="w-[6px] h-[6px] rounded-full bg-accent dark:bg-accent"></span>
                           <p className="text-white/60">
                             {t(`experienceCompany0${index}`)}
                           </p>
@@ -187,7 +187,7 @@ const Resume = () => {
                         key={index}
                         className="bg-primary dark:bg-[#232329] h-[250px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                       >
-                        <span className="text-accentLight dark:text-accent">
+                        <span className="text-accent dark:text-accent">
                           {t(`educationTime0${index}`)}
                         </span>
                         <h3 className="text-white text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
@@ -195,7 +195,7 @@ const Resume = () => {
                         </h3>
                         <div className="flex items-center gap-3">
                           {/* dot */}
-                          <span className="w-[6px] h-[6px] rounded-full bg-accentLight dark:bg-accent"></span>
+                          <span className="w-[6px] h-[6px] rounded-full bg-accent dark:bg-accent"></span>
                           <p className="text-white/60">
                             {t(`educationUniversity0${index}`)}
                           </p>
@@ -221,7 +221,7 @@ const Resume = () => {
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
                             <TooltipTrigger className="w-full h-[150px] bg-primary dark:bg-[#232329] rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl text-white group-hover:text-accentLight dark:group-hover:text-accent transition-all duration-500">
+                              <div className="text-6xl text-white group-hover:text-accent dark:group-hover:text-accent transition-all duration-500">
                                 {skill.icon}
                               </div>
                             </TooltipTrigger>

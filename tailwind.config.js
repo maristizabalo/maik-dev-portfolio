@@ -32,7 +32,7 @@ module.exports = {
         bgLight: '#F5F5F5',
         textLight: "#222222",
         textSecLight: "#555555",
-        accentLight: {
+        accent: {
           DEFAULT: '#1E40AF',
           hover: '#000E3D',
         },
