@@ -247,20 +247,21 @@ const Resume = () => {
                 <p className="max-w-[600px] text-gray-800 dark:text-white/60 mx-auto xl:mx-0">
                   {t("about-me-description")}
                 </p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                  {[1, 2, 3, 4, 5, 6, 7].map((index) => {
+
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-4 max-w-[700px] xl:mx-0 mx-auto">
+                  {[1, 2, 3, 4, 5, 6, 7].map((index) => (
                     <li
                       key={index}
-                      className="flex items-center justify-center xl:justify-start gap-4"
+                      className="flex justify-between items-center bg-primary dark:bg-[#2d2d2d] border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-3 shadow-sm"
                     >
-                      <span className="text-gray-800 dark:text-white/60">
+                      <span className="text-sm font-medium text-gray-400 dark:text-gray-400 whitespace-nowrap">
                         {t(`profileTitle0${index}`)}
                       </span>
-                      <span className="text-xl">
+                      <span className="text-base font-semibold text-white text-right break-all max-w-[65%]">
                         {t(`profileValue0${index}`)}
                       </span>
-                    </li>;
-                  })}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </TabsContent>
