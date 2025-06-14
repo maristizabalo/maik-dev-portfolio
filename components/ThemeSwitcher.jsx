@@ -31,7 +31,7 @@ const ThemeSwitcher = () => {
                     onClick={handleTheme}
                     className="relative inline-flex items-center justify-center rounded-full transition duration-500 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     style={{
-                        backgroundColor: theme === 'light' ? '#f5f5f5' : '#333', // Fondo según el modo
+                        backgroundColor: theme === 'light' ? '#fff' : '#333', // Fondo según el modo
                         color: theme === 'light' ? '#333' : '#fff', // Color del ícono
                         padding: '12px', // Ajuste el padding para que se vea bien
                         width: '50px', // Ancho del botón
