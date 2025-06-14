@@ -23,7 +23,7 @@
   }
 
   .text-outline-hover {
-    -webkit-text-stroke: 2px #1E40AF; /* azul oscuro para hover en light */
+    -webkit-text-stroke: 2px #00e0ff; /* azul oscuro para hover en light */
   }
 
   .dark .text-outline {
