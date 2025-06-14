@@ -1,79 +1,103 @@
 {
-    "Nav": {
-        "home": "Home",
-        "services": "Services",
-        "resume": "Resume",
-        "work": "Work",
-        "contact": "Contact",
-        "hire-me": "Hire me"
-    },
-    "Home": {
-        "rol": "Software Developer",
-        "greeting": "Hello I´m",
-        "professional-profile": "I excel at crafting elegant digital experiences and I am proficient in various programming languages and technologies",
-        "button-cv": "Download CV"
-    },
-    "Stats": {
-        "years-experience": "Years of experience",
-        "projects-completed": "Projects completed",
-        "technologies-mastered": "Technologies mastered",
-        "code-commits": "Code commits"
-    },
-    "Services": {
-        "num01": "01",
-        "title01": "Full Stack Development",
-        "description01": "I offer comprehensive web development services, from front-end to back-end, using modern technologies to create scalable and efficient applications.",
-        "href01": "",
-        "num02": "02",
-        "title02": "Machine Learning & AI",
-        "description02": "I am constantly learning and applying machine learning and artificial intelligence techniques to develop predictive models and automated solutions.",
-        "href02": "",
-        "num03": "03",
-        "title03": "Data Analysis with Power BI",
-        "description03": "Expert in data manipulation and visualization using Power BI to transform complex data into interactive and easy-to-understand reports.",
-        "href03": "",
-        "num04": "04",
-        "title04": "Python Development",
-        "description04": "With extensive knowledge in Python, I develop customized solutions, from process automation to API creation and data analysis.",
-        "href04": ""
-    },
-    "Resume": {
-        "experience": "Experience",
-        "education": "Education",
-        "skills": "Skills",
-        "about-me": "About me",
-        
-        "experience-title": "My experience",
-        "experience-description": "Throughout my career, I have worked on various projects ranging from web application development to implementing artificial intelligence solutions. My focus has always been on creating high-quality software that meets client needs and enhances user experience.",
-        
-        "experienceCompany01": "DADEP",
-        "experiencePosition01": "Full Stack Developer",
-        "experienceTime01": "2022 - 2025",
+  "Nav": {
+    "home": "Home",
+    "services": "Services",
+    "resume": "Resume",
+    "work": "Work",
+    "contact": "Contact",
+    "hire-me": "Hire me"
+  },
+  "Home": {
+    "rol": "Software Developer",
+    "greeting": "Hello I´m",
+    "professional-profile": "I excel at crafting elegant digital experiences and I am proficient in various programming languages and technologies",
+    "button-cv": "Download CV"
+  },
+  "Stats": {
+    "years-experience": "Years of experience",
+    "projects-completed": "Projects completed",
+    "technologies-mastered": "Technologies mastered",
+    "code-commits": "Code commits"
+  },
+  "Services": {
+    "num01": "01",
+    "title01": "Full Stack Development",
+    "description01": "I offer comprehensive web development services, from front-end to back-end, using modern technologies to create scalable and efficient applications.",
+    "href01": "",
+    "num02": "02",
+    "title02": "Machine Learning & AI",
+    "description02": "I am constantly learning and applying machine learning and artificial intelligence techniques to develop predictive models and automated solutions.",
+    "href02": "",
+    "num03": "03",
+    "title03": "Data Analysis with Power BI",
+    "description03": "Expert in data manipulation and visualization using Power BI to transform complex data into interactive and easy-to-understand reports.",
+    "href03": "",
+    "num04": "04",
+    "title04": "Python Development",
+    "description04": "With extensive knowledge in Python, I develop customized solutions, from process automation to API creation and data analysis.",
+    "href04": ""
+  },
+  "Resume": {
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "about-me": "About me",
 
-        "experienceCompany02": "Raddar Studios",
-        "experiencePosition02": "Software Engineer",
-        "experienceTime02": "2023 - 2023",
+    "experience-title": "My experience",
+    "experience-description": "Throughout my career, I have worked on various projects ranging from web application development to implementing artificial intelligence solutions. My focus has always been on creating high-quality software that meets client needs and enhances user experience.",
 
-        "experienceCompany03": "INVERTAXI",
-        "experiencePosition03": "Full Stack Developer",
-        "experienceTime03": "2020 - 2022",
+    "experienceCompany01": "DADEP",
+    "experiencePosition01": "Full Stack Developer",
+    "experienceTime01": "2022 - 2025",
 
-        "education-title": "My education",
-        "education-description": "I have a solid educational background in software engineering, which has provided me with the theoretical and practical knowledge necessary to excel in my field. I am committed to continuous learning and staying updated with the latest technologies.",
-    
-        "educationUniversity01": "SENA",
-        "educationDegree01": "Technologist in Analysis and Development of Information Systems",
-        "educationTime01": "2020 - 2022",
+    "experienceCompany02": "Raddar Studios",
+    "experiencePosition02": "Software Engineer",
+    "experienceTime02": "2023 - 2023",
 
-        "educationUniversity02": "MinTIC and University of Antioquia",
-        "educationDegree02": "Diploma in Software Development",
-        "educationTime02": "2022 - 2022",
+    "experienceCompany03": "INVERTAXI",
+    "experiencePosition03": "Full Stack Developer",
+    "experienceTime03": "2020 - 2022",
 
-        "educationUniversity03": "Google",
-        "educationDegree03": "Short Courses in Generative AI",
-        "educationTime03": "2024 - 2024",
+    "education-title": "My education",
+    "education-description": "I have a solid educational background in software engineering, which has provided me with the theoretical and practical knowledge necessary to excel in my field. I am committed to continuous learning and staying updated with the latest technologies.",
 
-        "skills-title": "My skills",
-        "skills-description": "I possess a diverse set of skills that enable me to tackle complex challenges and deliver innovative solutions. My expertise includes web development, machine learning, data analysis, and more."
-    }
+    "educationUniversity01": "SENA",
+    "educationDegree01": "Technologist in Analysis and Development of Information Systems",
+    "educationTime01": "2020 - 2022",
+
+    "educationUniversity02": "MinTIC and University of Antioquia",
+    "educationDegree02": "Diploma in Software Development",
+    "educationTime02": "2022 - 2022",
+
+    "educationUniversity03": "Google",
+    "educationDegree03": "Short Courses in Generative AI",
+    "educationTime03": "2024 - 2024",
+
+    "skills-title": "My skills",
+    "skills-description": "I possess a diverse set of skills that enable me to tackle complex challenges and deliver innovative solutions. My expertise includes web development, machine learning, data analysis, and more.",
+
+    "about-me-title": "About me",
+    "about-me-description": "I am a passionate software developer with a strong commitment to excellence and continuous improvement. I thrive on challenges and enjoy collaborating with others to create impactful solutions. My goal is to leverage technology to make a positive difference in the world.",
+
+    "profileTitle01": "Name",
+    "profileValue01": "Maicol Aristizabal",
+
+    "profileTitle02": "Phone",
+    "profileValue02": "(+57) 310 689 04 60",
+
+    "profileTitle03": "Experience",
+    "profileValue03": "5+ Years",
+
+    "profileTitle04": "Nationality",
+    "profileValue04": "Colombian",
+
+    "profileTitle05": "Email",
+    "profileValue05": "maristizabalo95@gmail.com",
+
+    "profileTitle06": "Freelance",
+    "profileValue06": "Available",
+
+    "profileTitle07": "Languages",
+    "profileValue07": "Spanish, English"
+  }
 }
