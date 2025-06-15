@@ -99,5 +99,21 @@
 
     "profileTitle07": "Languages",
     "profileValue07": "Spanish, English"
+  },
+  "Contact": {
+    "title": "Contact me",
+    "description": "If you have any questions or want to discuss a project, feel free to reach out. I'm here to help.",
+    "form-first-name": "Firstname",
+    "form-last-name": "Lastname",
+    "form-email": "Email",
+    "form-number": "Phone number",
+    "form-select-service": "Select a service",
+    "form-service-web-development": "Web Development",
+    "form-service-ml-ai": "Machine Learning & AI",
+    "form-service-data-analysis": "Data Analysis",
+    "form-message": "Write your message",
+    "form-submit": "Send Message",
+    "form-success": "Thank you for your message! I will get back to you as soon as possible.",
+    "form-error": "There was an error sending your message. Please try again later."
   }
 }
