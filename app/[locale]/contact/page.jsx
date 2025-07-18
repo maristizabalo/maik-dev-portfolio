@@ -10,42 +10,44 @@ import {
   SelectItem,
   SelectLabel,
   SelectTrigger,
-  SelectValue
-} from "@/components/ui/select"
+  SelectValue,
+} from "@/components/ui/select";
 
-import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa"
+import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
 
 const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "(+57) 310 689 04 60"
+    description: "(+57) 310 689 04 60",
   },
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "myemail@gmail.com"
+    description: "maristizabalo95@gmail.com",
   },
   {
     icon: <FaMapMarkedAlt />,
     title: "Address",
-    description: "Bogotá, Colombia"
+    description: "Bogotá, Colombia",
   },
-]
+];
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const Contact = () => {
+  const t = useTranslations("Contact");
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition:
-        {
+        transition: {
           delay: 0.3,
           duration: 0.2,
-          ease: "easeIn"
+          ease: "easeIn",
         },
       }}
       className="py-6"
@@ -54,33 +56,30 @@ const Contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px] ">
           {/* form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
-              <h3 className="text-4xl text-accent">
-                Lets work together
-              </h3>
-              <p className="text-white/60">
-                Lorem ipsum doler cosectelur adicpidn elit. Eim minhil sapiente suma pariatur ed total.
+            <form className="flex flex-col gap-6 p-10 bg-primary dark:bg-[#27272c] rounded-xl">
+              <h3 className="text-4xl text-accent">{t('title')}</h3>
+              <p className="text-white dark:text-white/60">
+                {t('description')}
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Firstname" />
-                <Input type="lastname" placeholder="Lastname" />
-                <Input type="email" placeholder="Email address" />
-                <Input type="phone" placeholder="Phone number" />
+                <Input type="firstname" placeholder={t('form-first-name')}/>
+                <Input type="lastname" placeholder={t('form-last-name')} />
+                <Input type="email" placeholder={t('form-email')} />
+                <Input type="phone" placeholder={t('form-number')} />
               </div>
 
               {/* select */}
               <Select>
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Slect a service" />
+                  <SelectValue placeholder={t('form-select-service')} />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="est">Full Stack Development</SelectItem>
-                    <SelectItem value="cst">Data Analyst</SelectItem>
-                    <SelectItem value="mst">Gen AI</SelectItem>
-
+                    <SelectLabel>{t('form-select-service')}</SelectLabel>
+                    <SelectItem value="est">{t('form-service-web-development')}</SelectItem>
+                    <SelectItem value="cst">{t('form-service-ml-ai')}</SelectItem>
+                    <SelectItem value="mst">{t('form-service-data-analysis')}</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
@@ -88,12 +87,12 @@ const Contact = () => {
               {/* textarea */}
               <Textarea
                 className="h-[200px]"
-                placeholder="Type your message here."
+                placeholder={t('form-message')}
               />
 
               {/* btn */}
               <Button size="md" className="max-w-40">
-                Send message
+                {t('form-submit')}
               </Button>
             </form>
           </div>
@@ -104,22 +103,24 @@ const Contact = () => {
               {info.map((item, index) => {
                 return (
                   <li key={index} className="flex items-center gap-6">
-                    <div className="w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-[#27272c] text-accent rounded-md flex items-center justify-center">
+                    <div className="w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-primary dark:bg-[#27272c] text-accent rounded-md flex items-center justify-center">
                       <div className="text-[28px]">{item.icon}</div>
                     </div>
                     <div className="flex-1">
-                      <p className="text-white/60">{item.title}</p>
+                      <p className="text-gray-800 dark:text-white/60">
+                        {item.title}
+                      </p>
                       <h3 className="text-xl">{item.description}</h3>
                     </div>
                   </li>
-                )
+                );
               })}
             </ul>
           </div>
         </div>
       </div>
     </motion.section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
