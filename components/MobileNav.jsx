@@ -6,6 +6,7 @@ import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci"
 import { useLocale, useTranslations } from "next-intl";
 import ThemeSwitcher from "./ThemeSwitcher";
+import LocaleSwitcher from "./LocaleSwitcher";
 
 
 const MobileNav = () => {
@@ -43,14 +44,17 @@ const MobileNav = () => {
       </SheetTrigger>
       <SheetContent className="flex flex-col">
         {/* logo */}
-        <div className="mt-32 mb-40 text-center text-2xl">
+        <div className="mt-28 mb-32 text-center text-2xl">
           <Link href="/">
-            <h1 className="text-4xl font-semibold">
-              Mj
+            <h1 className="font-display text-4xl font-bold text-plum dark:text-white">
+              A Chiz
               <span className="text-accent dark:text-accent">.</span>
             </h1>
           </Link>
-          <ThemeSwitcher />
+          <div className="mt-6 flex items-center justify-center gap-3">
+            <ThemeSwitcher />
+            <LocaleSwitcher />
+          </div>
         </div>
 
         {/* nav */}
@@ -59,9 +63,11 @@ const MobileNav = () => {
             return <Link
               href={link.path}
               key={index}
-              className={`${link.path === pathname &&
-                "text-accent dark:text-accent border-b-2 border-accent dark:border-accent"
-                } text-xl capitalize  hover:text-accent dark:hover:text-accent transition-all`}>
+              className={`${
+                link.path === pathname
+                  ? "text-accent dark:text-accent border-b-2 border-accent dark:border-accent"
+                  : "text-plum/80 dark:text-white/80"
+              } text-xl capitalize hover:text-accent dark:hover:text-accent transition-all`}>
               {t(`${link.name}`)}
             </Link>
           })}

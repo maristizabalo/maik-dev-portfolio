@@ -23,22 +23,28 @@ module.exports = {
       xl: "1200px",
     },
     fontFamily: {
-      primary: "var(--font-jetbrainsMono)",
+      primary: "var(--font-nunito)",
+      display: "var(--font-display)",
     },
     extend: {
       colors: {
-        primary: '#030014',
-        bgDark: '#030014',
-        bgLight: '#EAEAEA',
-        textLight: "#222222",
-        textSecLight: "#555555",
+        primary: '#3B1732',
+        bgDark: '#241020',
+        bgLight: '#FFF5F9',
+        textLight: "#3F2636",
+        textSecLight: "#7D526B",
+        surfaceLight: "#FFFFFF",
+        surfaceDark: "#3B1732",
+        petal: "#FFE4EF",
+        blush: "#FFF0F6",
+        plum: "#3B1732",
+        mauve: "#8E4168",
+        sage: "#8AA399",
+        champagne: "#F9E4C8",
         accent: {
-          DEFAULT: '#1E40AF',
-          hover: '#000E3D',
-        },
-        accent: {
-          DEFAULT: '#00E0FF',
-          hover: '#00BFDA',
+          DEFAULT: '#EC4899',
+          hover: '#DB2777',
+          soft: '#F9A8D4',
         }
       },
       keyframes: {

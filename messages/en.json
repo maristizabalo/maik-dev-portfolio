@@ -5,12 +5,12 @@
     "resume": "Resume",
     "work": "Work",
     "contact": "Contact",
-    "hire-me": "Hire me"
+    "hire-me": "Let's work"
   },
   "Home": {
     "rol": "Software Developer",
-    "greeting": "Hello I´m",
-    "professional-profile": "I excel at crafting elegant digital experiences and I am proficient in various programming languages and technologies",
+    "greeting": "Hello, I'm",
+    "professional-profile": "I create elegant, warm, and functional digital experiences, blending thoughtful design with modern technologies.",
     "button-cv": "Download CV"
   },
   "Stats": {
@@ -77,10 +77,10 @@
     "skills-description": "I possess a diverse set of skills that enable me to tackle complex challenges and deliver innovative solutions. My expertise includes web development, machine learning, data analysis, and more.",
 
     "about-me-title": "About me",
-    "about-me-description": "I am a passionate software developer with a strong commitment to excellence and continuous improvement. I thrive on challenges and enjoy collaborating with others to create impactful solutions. My goal is to leverage technology to make a positive difference in the world.",
+    "about-me-description": "I am a passionate software developer focused on efficient, scalable, and visually polished solutions. I enjoy technical challenges, continuous learning, and collaborating to create thoughtful digital experiences.",
 
     "profileTitle01": "Name",
-    "profileValue01": "Maicol Aristizabal",
+    "profileValue01": "Andrea Chizabas",
 
     "profileTitle02": "Phone",
     "profileValue02": "(+57) 310 689 04 60",
@@ -102,7 +102,7 @@
   },
   "Contact": {
     "title": "Contact me",
-    "description": "If you have any questions or want to discuss a project, feel free to reach out. I'm here to help.",
+    "description": "If you have any questions or want to discuss a project, feel free to reach out. I'm here to help shape a memorable digital experience.",
     "form-first-name": "Firstname",
     "form-last-name": "Lastname",
     "form-email": "Email",

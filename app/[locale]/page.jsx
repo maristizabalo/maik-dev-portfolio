@@ -22,25 +22,28 @@ const Home = () => {
           ease: "easeIn"
         },
       }}
-      className="h-full"
+      className="relative h-full overflow-hidden"
       >
       <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
+        <div className="flex flex-col xl:flex-row items-center justify-between gap-12 xl:gap-16 xl:pt-10 xl:pb-16">
           {/* text */}
-          <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="dark:text-white text-xl">{t('rol')}</span>
-            <h1 className="h1 mb-6 dark:text-white">
-              {t('greeting')} <br /> <span className="text-accent dark:text-accent">Maicol Aristizabal</span>
+          <div className="order-2 max-w-[620px] text-center xl:order-none xl:text-left">
+            <span className="mb-4 inline-flex rounded-full border border-pink-100 bg-white/70 px-4 py-1 text-sm font-semibold text-mauve shadow-sm dark:border-white/10 dark:bg-white/5 dark:text-accent-soft">
+              A Chiz
+            </span>
+            <span className="block text-lg text-textSecLight dark:text-white/75">{t('rol')}</span>
+            <h1 className="h1 mb-6 text-plum dark:text-white">
+              {t('greeting')} <br /> <span className="text-accent dark:text-accent">Andrea Chizabas</span>
             </h1>
-            <p className="max-w-[500px] mb-9 dark:text-white/80">
+            <p className="mx-auto mb-9 max-w-[540px] text-textSecLight dark:text-white/75 xl:mx-0">
               {t('professional-profile')}
             </p>
             {/* button */}
-            <div className="flex flex-col xl:flex-row items-center gap-8">
+            <div className="flex flex-col items-center gap-8 xl:flex-row">
               <Button
                 variant="outline"
                 size="lg"
-                className="uppercase flex items-center gap-2"
+                className="flex items-center gap-2 uppercase"
               >
                 <span>{t('button-cv')}</span>
                 <FiDownload className="text-xl" />
@@ -48,7 +51,7 @@ const Home = () => {
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex gap-6"
-                  iconStyles="w-9 h-9 border border-accent dark:border-accent rounded-full flex justify-center items-center text-accent dark:text-accent text-base hover:bg-accent dark:hover:bg-accent hover:text-white dark:hover:text-primary hover:transition-all duration-500"
+                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base bg-white/60 dark:bg-white/5 hover:bg-accent dark:hover:bg-accent hover:text-white hover:transition-all duration-500"
                 />
               </div>
             </div>

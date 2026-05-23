@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const MaintenancePage = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-bgLight dark:bg-primary px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-bgLight dark:bg-bgDark px-4">
       {/* Motion Container */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -25,10 +25,10 @@ const MaintenancePage = () => {
         </div>
 
         {/* Text */}
-        <h1 className="text-3xl md:text-5xl font-bold text-primary dark:text-white mb-4">
+        <h1 className="font-display text-3xl md:text-5xl font-bold text-primary dark:text-white mb-4">
           ¡Estamos en mantenimiento!
         </h1>
-        <p className="text-lg text-gray-700 dark:text-white/60 max-w-xl mx-auto">
+        <p className="text-lg text-textSecLight dark:text-white/60 max-w-xl mx-auto">
           Estamos trabajando para mejorar tu experiencia. Vuelve pronto para
           descubrir las novedades.
         </p>

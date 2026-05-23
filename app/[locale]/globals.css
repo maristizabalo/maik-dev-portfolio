@@ -4,33 +4,43 @@
 
 @layer base {
   body {
-    @apply font-primary bg-bgLight dark:bg-primary text-black leading-loose;
+    @apply font-primary bg-bgLight dark:bg-bgDark text-plum dark:text-white leading-loose;
+    background: linear-gradient(135deg, #fff8fb 0%, #fff0f6 48%, #f9e4ec 100%);
     min-height: 100vh;
   }
+
+  .dark body {
+    background: linear-gradient(135deg, #241020 0%, #3b1732 54%, #4d1c3e 100%);
+  }
+
+  ::selection {
+    @apply bg-accent text-white;
+  }
+
   .h1 {
-    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+    @apply font-display text-[48px] xl:text-[78px] leading-[1.05] font-bold;
   }
   .h2 {
-    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+    @apply font-display text-[36px] xl:text-[48px] leading-[1.1] font-bold;
   }
   .h3 {
-    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+    @apply font-display text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
   }
 
   /* Global CSS */
   .text-outline {
-    -webkit-text-stroke: 2px #000000; /* negro para light */
+    -webkit-text-stroke: 2px #f9a8d4;
   }
 
   .text-outline-hover {
-    -webkit-text-stroke: 2px #00e0ff; /* azul oscuro para hover en light */
+    -webkit-text-stroke: 2px #ec4899;
   }
 
   .dark .text-outline {
-    -webkit-text-stroke: 2px #ffffff; /* blanco en dark */
+    -webkit-text-stroke: 2px #fbcfe8;
   }
 
   .dark .text-outline-hover {
-    -webkit-text-stroke: 2px #00e0ff; /* cian para hover en dark */
+    -webkit-text-stroke: 2px #f9a8d4;
   }
 }

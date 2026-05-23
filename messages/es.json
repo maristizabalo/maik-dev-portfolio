@@ -5,12 +5,12 @@
     "resume": "Resumen",
     "work": "Trabajo",
     "contact": "Contacto",
-    "hire-me": "Contratar"
+    "hire-me": "Trabajemos"
   },
   "Home": {
-    "rol": "Desarrollador de Software",
+    "rol": "Desarrolladora de Software",
     "greeting": "Hola, soy",
-    "professional-profile": "Me destaco en la creación de experiencias digitales elegantes y domino varios lenguajes y tecnologías de programación.",
+    "professional-profile": "Creo experiencias digitales elegantes, cálidas y funcionales, combinando diseño cuidado con tecnologías modernas.",
     "button-cv": "Descargar CV"
   },
   "Stats": {
@@ -30,7 +30,7 @@
     "href02": "",
     "num03": "03",
     "title03": "Análisis de Datos con Power BI",
-    "description03": "Experto en la manipulación y visualización de datos utilizando Power BI para transformar datos complejos en informes interactivos y fáciles de entender.",
+    "description03": "Experta en la manipulación y visualización de datos utilizando Power BI para transformar datos complejos en informes interactivos y fáciles de entender.",
     "href03": "",
     "num04": "04",
     "title04": "Desarrollo en Python",
@@ -77,10 +77,10 @@
     "skills-description": "Tengo un conjunto diverso de habilidades técnicas que abarcan desde el desarrollo web hasta la inteligencia artificial. Estoy siempre aprendiendo y adaptándome a nuevas tecnologías para ofrecer soluciones innovadoras.",
 
     "about-me-title": "Acerca de mí",
-    "about-me-description": "Soy un apasionado del desarrollo de software con un enfoque en la creación de soluciones eficientes y escalables. Me encanta enfrentar desafíos técnicos y aprender continuamente para mejorar mis habilidades. Mi objetivo es contribuir al éxito de los proyectos en los que participo, siempre buscando la excelencia en cada línea de código.",
+    "about-me-description": "Soy una apasionada del desarrollo de software con un enfoque en la creación de soluciones eficientes, escalables y visualmente cuidadas. Me encanta enfrentar desafíos técnicos y aprender continuamente para mejorar mis habilidades. Mi objetivo es contribuir al éxito de los proyectos en los que participo, siempre buscando excelencia en cada detalle.",
 
     "profileTitle01": "Nombre",
-    "profileValue01": "Maicol Aristizabal",
+    "profileValue01": "Andrea Chizabas",
 
     "profileTitle02": "Teléfono",
     "profileValue02": "(+57) 310 689 04 60",
@@ -89,7 +89,7 @@
     "profileValue03": "Más de 5 años",
 
     "profileTitle04": "Nacionalidad",
-    "profileValue04": "Colombiano",
+    "profileValue04": "Colombiana",
 
     "profileTitle05": "Correo electrónico",
     "profileValue05": "maristizabalo95@gmail.com",
@@ -102,7 +102,7 @@
   },
   "Contact": {
     "title": "Contáctame",
-    "description": "Si tienes alguna pregunta o deseas discutir un proyecto, no dudes en contactarme. Estoy aquí para ayudarte.",
+    "description": "Si tienes alguna pregunta o deseas discutir un proyecto, no dudes en contactarme. Estoy aquí para ayudarte a darle forma a una experiencia digital memorable.",
     "form-first-name": "Nombre",
     "form-last-name": "Apellido",
     "form-email": "Correo electrónico",

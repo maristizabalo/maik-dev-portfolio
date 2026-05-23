@@ -1,4 +1,4 @@
-import { JetBrains_Mono } from "next/font/google";
+import { Nunito, Playfair_Display } from "next/font/google";
 import "./globals.css";
 // components
 import Header from "@/components/Header";
@@ -8,15 +8,21 @@ import StarsCanvas from "@/components/StarBackground";
 import { NextIntlClientProvider, useLocale, useMessages } from "next-intl";
 import Providers from "@/components/Providers";
 
-const jetbrainsMono = JetBrains_Mono({
+const nunito = Nunito({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  variable: '--font-jetbrainsMono'
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-nunito",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["500", "600", "700", "800"],
+  variable: "--font-display",
 });
 
 export const metadata = {
-  title: "Mj Aristizabal",
-  description: "My portfolio",
+  title: "A Chiz | Andrea Chizabas",
+  description: "Portfolio de Andrea Chizabas",
   icons: {
     icon: '/maletin.png', // ubicado en la carpeta /public
   },
@@ -27,12 +33,12 @@ export default function RootLayout({ children }) {
   const messages = useMessages();
   return (
     <html lang={locale}>
-      <body className={`${jetbrainsMono.variable}`}>
+      <body className={`${nunito.variable} ${playfair.variable}`}>
         <NextIntlClientProvider messages={messages}>
           <Providers
             attribute="class"
-            defaultTheme="dark"
-            enableSystem
+            defaultTheme="light"
+            enableSystem={false}
             disableTransitionOnChange
           >
             <Header />

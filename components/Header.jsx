@@ -12,12 +12,12 @@ const Header = () => {
     const t = useTranslations('Nav')
 
     return (
-        <header className="xl:py-6 dark:text-white">
+        <header className="py-5 xl:py-6 text-plum dark:text-white">
             <div className="container mx-auto flex justify-between items-center">
                 {/* logo */}
                 <Link href="/">
-                    <h1 className="text-4xl font-semibold">
-                        Maicol <span className="text-accent dark:text-accent">.</span>
+                    <h1 className="font-display text-4xl font-bold">
+                        A Chiz <span className="text-accent dark:text-accent">.</span>
                     </h1>
                 </Link>
 

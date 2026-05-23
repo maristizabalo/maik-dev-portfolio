@@ -70,7 +70,7 @@ const about = {
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Maicol Aristizabal",
+      fieldValue: "Andrea Chizabas",
     },
     {
       fieldName: "Phone",
@@ -123,14 +123,14 @@ const Resume = () => {
         opacity: 1,
         transition: { delay: 0.3, duration: 0.2, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-10"
     >
-      <div className="container mx-auto dark:text-white">
+      <div className="container mx-auto text-plum dark:text-white">
         <Tabs
           defaultValue="experience"
           className="flex flex-col xl:flex-row gap-[60px]"
         >
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-4 rounded-lg border border-pink-100 bg-white/55 p-3 shadow-sm dark:border-white/10 dark:bg-white/5">
             <TabsTrigger value="experience">{t("experience")}</TabsTrigger>
             <TabsTrigger value="education">{t("education")}</TabsTrigger>
             <TabsTrigger value="skills">{t("skills")}</TabsTrigger>
@@ -143,7 +143,7 @@ const Resume = () => {
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{t("experience-title")}</h3>
-                <p className="max-w-[600px] text-gray-800 dark:text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[600px] text-textSecLight dark:text-white/60 mx-auto xl:mx-0">
                   {t("experience-description")}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -151,18 +151,18 @@ const Resume = () => {
                     {[1, 2, 3].map((index) => (
                       <li
                         key={index}
-                        className="bg-primary dark:bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        className="h-[184px] rounded-lg border border-pink-100 bg-white/80 px-10 py-6 shadow-sm dark:border-white/10 dark:bg-white/5 flex flex-col justify-center items-center lg:items-start gap-1"
                       >
                         <span className="text-accent dark:text-accent">
                           {t(`experienceTime0${index}`)}
                         </span>
-                        <h3 className="text-white text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                        <h3 className="text-plum dark:text-white text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
                           {t(`experiencePosition0${index}`)}
                         </h3>
                         <div className="flex items-center gap-3">
                           {/* dot */}
                           <span className="w-[6px] h-[6px] rounded-full bg-accent dark:bg-accent"></span>
-                          <p className="text-white/60">
+                          <p className="text-textSecLight dark:text-white/60">
                             {t(`experienceCompany0${index}`)}
                           </p>
                         </div>
@@ -177,7 +177,7 @@ const Resume = () => {
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{t("education-title")}</h3>
-                <p className="max-w-[600px] text-gray-800 dark:text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[600px] text-textSecLight dark:text-white/60 mx-auto xl:mx-0">
                   {t("education-description")}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -185,18 +185,18 @@ const Resume = () => {
                     {[1, 2, 3].map((index) => (
                       <li
                         key={index}
-                        className="bg-primary dark:bg-[#232329] h-[250px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        className="h-[250px] rounded-lg border border-pink-100 bg-white/80 px-10 py-6 shadow-sm dark:border-white/10 dark:bg-white/5 flex flex-col justify-center items-center lg:items-start gap-1"
                       >
                         <span className="text-accent dark:text-accent">
                           {t(`educationTime0${index}`)}
                         </span>
-                        <h3 className="text-white text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                        <h3 className="text-plum dark:text-white text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
                           {t(`educationDegree0${index}`)}
                         </h3>
                         <div className="flex items-center gap-3">
                           {/* dot */}
                           <span className="w-[6px] h-[6px] rounded-full bg-accent dark:bg-accent"></span>
-                          <p className="text-white/60">
+                          <p className="text-textSecLight dark:text-white/60">
                             {t(`educationUniversity0${index}`)}
                           </p>
                         </div>
@@ -211,7 +211,7 @@ const Resume = () => {
             <TabsContent value="skills" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{t("skills-title")}</h3>
-                <p className="max-w-[600px] text-gray-800 dark:text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[600px] text-textSecLight dark:text-white/60 mx-auto xl:mx-0">
                   {t("skills-description")}
                 </p>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
@@ -220,8 +220,8 @@ const Resume = () => {
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-primary dark:bg-[#232329] rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl text-white group-hover:text-accent dark:group-hover:text-accent transition-all duration-500">
+                            <TooltipTrigger className="w-full h-[150px] rounded-lg border border-pink-100 bg-white/80 shadow-sm dark:border-white/10 dark:bg-white/5 flex justify-center items-center group">
+                              <div className="text-6xl text-mauve dark:text-white group-hover:text-accent dark:group-hover:text-accent transition-all duration-500">
                                 {skill.icon}
                               </div>
                             </TooltipTrigger>
@@ -244,7 +244,7 @@ const Resume = () => {
             >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{t("about-me-title")}</h3>
-                <p className="max-w-[600px] text-gray-800 dark:text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[600px] text-textSecLight dark:text-white/60 mx-auto xl:mx-0">
                   {t("about-me-description")}
                 </p>
 
@@ -252,12 +252,12 @@ const Resume = () => {
                   {[1, 2, 3, 4, 5, 6, 7].map((index) => (
                     <li
                       key={index}
-                      className="flex justify-between items-center bg-primary dark:bg-[#2d2d2d] border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-3 shadow-sm"
+                      className="flex justify-between items-center rounded-lg border border-pink-100 bg-white/80 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-white/5"
                     >
-                      <span className="text-sm font-medium text-gray-400 dark:text-gray-400 whitespace-nowrap">
+                      <span className="text-sm font-medium text-mauve dark:text-accent-soft whitespace-nowrap">
                         {t(`profileTitle0${index}`)}
                       </span>
-                      <span className="text-base font-semibold text-white text-right break-all max-w-[65%]">
+                      <span className="text-base font-semibold text-plum dark:text-white text-right break-all max-w-[65%]">
                         {t(`profileValue0${index}`)}
                       </span>
                     </li>

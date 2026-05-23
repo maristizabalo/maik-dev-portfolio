@@ -27,23 +27,23 @@ const Stats = () => {
     ]
 
     return (
-        <section className="pt-4 pb-12 xl:pt-0 xl:pb-0">
+        <section className="pt-4 pb-12 xl:pt-0 xl:pb-16">
             <div className="container mx-auto">
-                <div className="flex flex-wrap gap-6 max-w-[80vh] mx-auto xl:max-w-none">
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 xl:gap-6 max-w-[900px] mx-auto xl:max-w-none">
                     {stats.map((item, index) => {
                         return (
                             <div 
                             key={index}
-                            className="flex-1 flex gap-4 items-center justify-center xl:justify-start"
+                            className="flex items-center justify-center gap-4 rounded-lg border border-pink-100 bg-white/70 p-5 shadow-sm backdrop-blur dark:border-white/10 dark:bg-white/5"
                             >
                                 <CountUp
                                     end={item.num}
                                     duration={5}
                                     delay={2}
-                                    className="text-4xl xl:text-6xl font-extrabold dark:text-white"
+                                    className="font-display text-4xl xl:text-5xl font-extrabold text-accent"
                                 />
                                 <p 
-                                className={`${item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"} leading-snug dark:text-white/80`}
+                                className={`${item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"} leading-snug text-textSecLight dark:text-white/70`}
                                 >
                                     {item.text}
                                     </p>
