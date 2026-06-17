@@ -41,7 +41,7 @@ const MaicolBotPanel = ({ onClose }) => {
   const [messages, setMessages] = useState([
     {
       role: "bot",
-      content: "Hola! Soy Maicol Bot. Preguntame sobre mi experiencia, proyectos, habilidades o disponibilidad.",
+      content: "¡Hola! Soy Maicol Bot 🤖 Pregúntame sobre mi experiencia, proyectos, habilidades o disponibilidad.",
     },
   ]);
   const [typing, setTyping] = useState(false);

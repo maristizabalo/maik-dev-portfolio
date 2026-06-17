@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDownToLine, ArrowUpRight, Bot, CheckCircle2, Code2, Cpu, Database, Gauge, Rocket, Sparkles } from "lucide-react";
 import { useLocale } from "next-intl";
 import { experience } from "@/data/portfolio/experience";
@@ -28,7 +28,7 @@ const badges = [
   { label: "Innovation", className: "left-0 top-40", icon: Cpu },
 ];
 
-const particles = Array.from({ length: 22 }, (_, index) => ({
+const particles = Array.from({ length: 14 }, (_, index) => ({
   left: `${(index * 37) % 96}%`,
   top: `${(index * 53) % 88}%`,
   delay: index * 0.15,
@@ -42,6 +42,7 @@ const statusStyles = {
 
 const Home = () => {
   const locale = useLocale();
+  const prefersReducedMotion = useReducedMotion();
   const featuredProjects = projects.slice(0, 4);
   const topSkills = skills.slice(0, 14);
 
@@ -98,19 +99,19 @@ const Home = () => {
           {particles.map((particle) => (
             <motion.span
               key={`${particle.left}-${particle.top}`}
-              animate={{ opacity: [0.2, 0.9, 0.2], scale: [0.8, 1.25, 0.8] }}
+              animate={prefersReducedMotion ? undefined : { opacity: [0.2, 0.9, 0.2], scale: [0.8, 1.25, 0.8] }}
               transition={{ duration: 3.2, repeat: Infinity, delay: particle.delay }}
-              className="absolute h-1 w-1 rounded-full bg-cyan"
+              className="absolute hidden h-1 w-1 rounded-full bg-cyan md:block"
               style={{ left: particle.left, top: particle.top }}
             />
           ))}
           <motion.div
-            animate={{ rotate: 360 }}
+            animate={prefersReducedMotion ? undefined : { rotate: 360 }}
             transition={{ duration: 34, repeat: Infinity, ease: "linear" }}
             className="absolute left-1/2 top-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan/20"
           />
           <motion.div
-            animate={{ rotate: -360 }}
+            animate={prefersReducedMotion ? undefined : { rotate: -360 }}
             transition={{ duration: 48, repeat: Infinity, ease: "linear" }}
             className="absolute left-1/2 top-1/2 h-[460px] w-[260px] -translate-x-1/2 -translate-y-1/2 rotate-45 rounded-[50%] border border-violet/25"
           />

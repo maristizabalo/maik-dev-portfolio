@@ -3,7 +3,7 @@ export const profile = {
   role: "Desarrollador Full Stack & Ingeniero de Soluciones",
   headline:
     "Construyo aplicaciones web modernas, dashboards, APIs, automatizaciones e integraciones con IA que resuelven problemas reales de negocio.",
-  location: "Bogota, Colombia",
+  location: "Bogotá, Colombia",
   email: "maristizabalo95@gmail.com",
   phone: "(+57) 310 689 04 60",
   availability: "Disponible para trabajos freelance y proyectos a largo plazo",

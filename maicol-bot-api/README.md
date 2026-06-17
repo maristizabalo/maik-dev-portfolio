@@ -31,5 +31,5 @@ Maicol Bot solo debe responder sobre Maicol Aristizabal, su experiencia, proyect
 Si la pregunta es externa, debe responder:
 
 ```text
-Solo puedo ayudarte con informacion sobre Maicol Aristizabal, su experiencia, proyectos, habilidades y servicios profesionales.
+Solo puedo ayudarte con información sobre Maicol Aristizabal, su experiencia, proyectos, habilidades y servicios profesionales.
 ```

@@ -1,11 +1,11 @@
 "use client";
 
 const questions = [
-  "Que proyectos ha desarrollado?",
-  "Con que tecnologias trabaja?",
-  "Tiene experiencia en backend?",
-  "Esta disponible para proyectos?",
-  "Donde puedo ver su CV?",
+  "¿Qué proyectos ha desarrollado?",
+  "¿Con qué tecnologías trabaja?",
+  "¿Tiene experiencia en backend?",
+  "¿Está disponible para proyectos?",
+  "¿Dónde puedo ver su CV?",
 ];
 
 const QuickQuestions = ({ onSelect }) => {
