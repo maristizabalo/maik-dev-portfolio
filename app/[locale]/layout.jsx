@@ -2,9 +2,6 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 // components
 import Header from "@/components/Header";
-import PageTransition from "@/components/PageTransition";
-import StairTransition from "@/components/StairTransition";
-import StarsCanvas from "@/components/StarBackground";
 import { NextIntlClientProvider, useLocale, useMessages } from "next-intl";
 import Providers from "@/components/Providers";
 
@@ -15,8 +12,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Mj Aristizabal",
-  description: "My portfolio",
+  title: "Maicol Aristizabal | Full Stack Developer",
+  description: "Desarrollador Full Stack especializado en plataformas web, dashboards, APIs, automatizacion e integraciones con IA.",
   icons: {
     icon: '/maletin.png', // ubicado en la carpeta /public
   },
@@ -36,11 +33,11 @@ export default function RootLayout({ children }) {
             disableTransitionOnChange
           >
             <Header />
-            {/* <StairTransition /> */}
-            {/* <StarsCanvas /> */}
-            {/* <PageTransition> */}
+            <main className="relative min-h-screen px-4 pb-10 pt-24 xl:pl-[132px] xl:pr-6 xl:pt-6">
+              <div className="soft-grid-bg pointer-events-none fixed inset-0 opacity-50" />
+              <div className="noise-overlay pointer-events-none fixed inset-0" />
               {children}
-            {/* </PageTransition> */}
+            </main>
           </Providers>
         </NextIntlClientProvider>
       </body>
