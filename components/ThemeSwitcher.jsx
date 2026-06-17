@@ -1,20 +1,11 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
 import { useTheme } from "next-themes";
 import { CiDark, CiLight } from "react-icons/ci";
 
-const subscribe = () => () => {};
-const getClientSnapshot = () => true;
-const getServerSnapshot = () => false;
-
 const ThemeSwitcher = () => {
-  const mounted = useSyncExternalStore(subscribe, getClientSnapshot, getServerSnapshot);
-  const { theme, setTheme } = useTheme();
-
-  if (!mounted) {
-    return null;
-  }
+  const { resolvedTheme, setTheme } = useTheme();
+  const theme = resolvedTheme || "dark";
 
   const handleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");

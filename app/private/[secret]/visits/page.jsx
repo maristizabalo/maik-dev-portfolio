@@ -10,10 +10,11 @@ export const metadata = {
   },
 };
 
-export default function PrivateVisitsPage({ params }) {
+export default async function PrivateVisitsPage({ params }) {
+  const { secret } = await params;
   const secretPath = process.env.ANALYTICS_SECRET_PATH;
 
-  if (!secretPath || params.secret !== secretPath) {
+  if (!secretPath || secret !== secretPath) {
     notFound();
   }
 
