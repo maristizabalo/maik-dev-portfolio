@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { NextIntlClientProvider, useLocale, useMessages } from "next-intl";
 import Providers from "@/components/Providers";
+import VisitTracker from "@/components/analytics/VisitTracker";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
               <div className="noise-overlay pointer-events-none fixed inset-0" />
               {children}
             </main>
+            <VisitTracker />
           </Providers>
         </NextIntlClientProvider>
       </body>
