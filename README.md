@@ -2,6 +2,12 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+Install dependencies:
+
+```bash
+npm install
+```
+
 First, run the development server:
 
 ```bash
@@ -12,6 +18,13 @@ yarn dev
 pnpm dev
 # or
 bun dev
+```
+
+Quality checks:
+
+```bash
+npm run lint
+npm run build
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
