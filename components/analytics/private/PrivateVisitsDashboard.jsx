@@ -22,7 +22,10 @@ const StatCard = ({ icon: Icon, label, value }) => (
 );
 
 const PrivateVisitsDashboard = () => {
-  const [token, setToken] = useState("");
+  const [token, setToken] = useState(() => {
+    if (typeof window === "undefined") return "";
+    return window.sessionStorage.getItem(SESSION_TOKEN_KEY) || "";
+  });
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -72,12 +75,11 @@ const PrivateVisitsDashboard = () => {
   }, [token]);
 
   useEffect(() => {
-    const savedToken = window.sessionStorage.getItem(SESSION_TOKEN_KEY);
-    if (savedToken) {
-      setToken(savedToken);
-      fetchVisits(savedToken);
+    if (token) {
+      const timeoutId = window.setTimeout(() => fetchVisits(token), 0);
+      return () => window.clearTimeout(timeoutId);
     }
-  }, [fetchVisits]);
+  }, [fetchVisits, token]);
 
   return (
     <div className="relative z-10 mx-auto max-w-[1440px] space-y-5 px-4 py-6 md:px-6">
