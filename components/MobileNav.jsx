@@ -3,72 +3,53 @@
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { CiMenuFries } from "react-icons/ci"
 import { useLocale, useTranslations } from "next-intl";
-import ThemeSwitcher from "./ThemeSwitcher";
-
+import { Menu } from "lucide-react";
+import LocaleSwitcher from "./LocaleSwitcher";
+import Logo from "./brand/Logo";
 
 const MobileNav = () => {
   const pathname = usePathname();
-  const t = useTranslations('Nav');
+  const t = useTranslations("Nav");
   const locale = useLocale();
 
   const links = [
-    {
-        name: "home",
-        path: `/${locale}`,
-    },
-    {
-        name: "services",
-        path: `/${locale}/services`,
-    },
-    {
-        name: "resume",
-        path: `/${locale}/resume`,
-    },
-    {
-        name: "work",
-        path: `/${locale}/work`,
-    },
-    {
-        name: "contact",
-        path: `/${locale}/contact`,
-    },
-]
+    { name: "home", path: `/${locale}` },
+    { name: "services", path: `/${locale}/services` },
+    { name: "resume", path: `/${locale}/resume` },
+    { name: "work", path: `/${locale}/work` },
+    { name: "contact", path: `/${locale}/contact` },
+  ];
 
   return (
     <Sheet>
-      <SheetTrigger className="flex justify-center items-center">
-        <CiMenuFries className="text-[32px] text-accent dark:text-accent" />
+      <SheetTrigger className="grid h-11 w-11 place-items-center rounded-full border border-white/10 bg-white/[0.04] text-white">
+        <Menu className="h-5 w-5" />
       </SheetTrigger>
-      <SheetContent className="flex flex-col">
-        {/* logo */}
-        <div className="mt-32 mb-40 text-center text-2xl">
-          <Link href="/">
-            <h1 className="text-4xl font-semibold">
-              Mj
-              <span className="text-accent dark:text-accent">.</span>
-            </h1>
+      <SheetContent className="flex flex-col border-white/10 bg-[#070b18]/95 text-white backdrop-blur-2xl">
+        <div className="mb-12 mt-16 flex items-center justify-between">
+          <Link href={`/${locale}`}>
+            <Logo />
           </Link>
-          <ThemeSwitcher />
+          <LocaleSwitcher compact />
         </div>
 
-        {/* nav */}
-        <nav className="flex flex-col justify-center items-center gap-8">
-          {links.map((link, index) => {
-            return <Link
+        <nav className="flex flex-col gap-4">
+          {links.map((link) => (
+            <Link
               href={link.path}
-              key={index}
-              className={`${link.path === pathname &&
-                "text-accent dark:text-accent border-b-2 border-accent dark:border-accent"
-                } text-xl capitalize  hover:text-accent dark:hover:text-accent transition-all`}>
+              key={link.path}
+              className={`${
+                link.path === pathname ? "border-cyan/35 bg-cyan/10 text-cyan" : "border-white/10 text-white/75"
+              } rounded-2xl border px-5 py-4 text-lg capitalize transition-all hover:border-cyan/30 hover:text-white`}
+            >
               {t(`${link.name}`)}
             </Link>
-          })}
+          ))}
         </nav>
       </SheetContent>
     </Sheet>
-  )
-}
+  );
+};
 
-export default MobileNav
+export default MobileNav;

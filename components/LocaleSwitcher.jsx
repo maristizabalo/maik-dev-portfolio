@@ -1,49 +1,29 @@
-"use client"
-import { useLocale } from 'next-intl'
-import Image from 'next/image'
-import eeuu from '../public/assets/eeuu.png'
-import espana from '../public/assets/espana.png'
-import { useTheme } from 'next-themes'
-import { useTransition } from 'react'
-import { useRouter } from 'next/navigation'
+"use client";
 
+import { useLocale } from "next-intl";
+import { Languages } from "lucide-react";
+import { useRouter } from "next/navigation";
 
-const LocaleSwitcher = () => {
-    const locale = useLocale();
-    const router = useRouter();
-    const { theme, setTheme } = useTheme();
-    
-    const handleLocale = () => {
-        if(locale==="es"){
-                router.replace('/en')
-        }else{
-                router.replace('/es')
-        }
-    }
+const LocaleSwitcher = ({ compact = false }) => {
+  const locale = useLocale();
+  const router = useRouter();
 
-    return (
-        <div>
-            <div className="relative flex items-center justify-center">
-                <button
-                    onClick={handleLocale}
-                    className="relative inline-flex items-center justify-center rounded-full transition duration-500 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                    style={{
-                        backgroundColor: theme === 'light' ? '#fff' : '#333', // Fondo según el modo
-                        color: theme === 'light' ? '#333' : '#fff', // Color del ícono
-                        padding: '12px', // Ajuste el padding para que se vea bien
-                        width: '50px', // Ancho del botón
-                        height: '44px', // Alto del botón
-                    }}
-                >
-                    {locale === 'es' ? (
-                        <Image src={espana} alt="España" width={44} height={44} />
-                    ) : (
-                        <Image src={eeuu} alt="Estados Unidos" width={44} height={44} />
-                    )}
-                </button>
-            </div>
-        </div>
-    )
-}
+  const handleLocale = () => {
+    router.replace(locale === "es" ? "/en" : "/es");
+  };
 
-export default LocaleSwitcher
+  return (
+    <button
+      onClick={handleLocale}
+      className={`${
+        compact ? "h-12 w-12 px-0" : "h-11 px-4"
+      } inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] text-xs font-semibold uppercase text-white/75 transition hover:border-cyan/35 hover:text-white`}
+      aria-label="Cambiar idioma"
+    >
+      <Languages className="h-4 w-4" />
+      {!compact && <span>{locale}</span>}
+    </button>
+  );
+};
+
+export default LocaleSwitcher;

@@ -1,0 +1,33 @@
+export const skills = [
+  "React",
+  "Next.js",
+  "Svelte",
+  "Python",
+  "Django",
+  "Flask",
+  "Node.js",
+  "PHP",
+  "Go",
+  "Docker",
+  "Linux",
+  "PostgreSQL",
+  "MySQL",
+  "Oracle",
+  "Firebase",
+  "AWS",
+  "GCP",
+  "IA aplicada",
+  "Automatizacion",
+  "Asterisk",
+  "FreePBX",
+  "Issabel",
+  "CDR",
+];
+
+export const skillGroups = [
+  { label: "Frontend", items: ["React", "Next.js", "Svelte", "Tailwind CSS", "UI/UX"] },
+  { label: "Backend", items: ["Python", "Django", "Flask", "Node.js", "PHP", "Go"] },
+  { label: "Datos", items: ["PostgreSQL", "MySQL", "Oracle", "Firebase", "CDR"] },
+  { label: "Cloud & Ops", items: ["Docker", "Linux", "AWS", "GCP", "Caddy"] },
+  { label: "IA", items: ["IA aplicada", "Automatizacion", "Agentes de voz"] },
+];

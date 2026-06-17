@@ -1,185 +1,86 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react"
-import "swiper/css";
+import { ArrowUpRight, Lock, Rocket } from "lucide-react";
+import { projects } from "@/data/portfolio/projects";
+import GlassCard from "@/components/ui/GlassCard";
+import GlowButton from "@/components/ui/GlowButton";
+import Reveal from "@/components/motion/Reveal";
+import StaggerContainer from "@/components/motion/StaggerContainer";
+import { fadeUp } from "@/lib/motion";
 
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-
-import Link from "next/link";
-import Image from "next/image";
-import WorkSliderBtns from "@/components/WorkSliderBtns";
-import MaintenancePage from "@/components/MaintenancePage";
-
-const projects = [
-  {
-    num: "01",
-    category: "frontend",
-    title: "project 1",
-    description: "ABCDEF GHJI KTUSJ NSMNFDIUFDMNGIFDMG IMGFDI  JRENUR EW ENFUEF  ESFNSEUFNESMF ESJFNUSEFES RUJSENFUSENFJ FEIOUFMNEWIQPFNMIUOSEF SF UOIER FUWEFUWE FUOSE FYUE FUEW FUWEFNOWEIUFN3 F3 U RFUO´W3N FE",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/",
-    live: "",
-    github: "",
-  },
-  {
-    num: "02",
-    category: "fullstack",
-    title: "project 2",
-    description: "ABCDEF GHJI KTUSJ NSMNFDIUFDMNGIFDMG IMGFDI  JRENUR EW ENFUEF  ESFNSEUFNESMF ESJFNUSEFES RUJSENFUSENFJ FEIOUFMNEWIQPFNMIUOSEF SF UOIER FUWEFUWE FUOSE FYUE FUEW FUWEFNOWEIUFN3 F3 U RFUO´W3N FE",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/",
-    live: "",
-    github: "",
-  },
-  {
-    num: "03",
-    category: "backend",
-    title: "project 3",
-    description: "ABCDEF GHJI KTUSJ NSMNFDIUFDMNGIFDMG IMGFDI  JRENUR EW ENFUEF  ESFNSEUFNESMF ESJFNUSEFES RUJSENFUSENFJ FEIOUFMNEWIQPFNMIUOSEF SF UOIER FUWEFUWE FUOSE FYUE FUEW FUWEFNOWEIUFN3 F3 U RFUO´W3N FE",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/",
-    live: "",
-    github: "",
-  },
-]
+const statusStyles = {
+  privado: "border-violet/30 bg-violet/10 text-violet-200",
+  publico: "border-cyan/30 bg-cyan/10 text-cyan-100",
+  "en desarrollo": "border-magenta/30 bg-magenta/10 text-fuchsia-100",
+};
 
 const Work = () => {
-  const [project, setProject] = useState(projects[0]);
-
-  const handleSlideChange = (swiper) => {
-
-    //get current slide index
-    const currentIndex = swiper.activeIndex
-    console.log(currentIndex)
-
-    //update project state based on current slide index
-    setProject(projects[currentIndex]);
-  }
   return (
-    // <motion.section
-    //   initial={{ opacity: 0 }}
-    //   animate={{
-    //     opacity: 1,
-    //     transition:
-    //     {
-    //       delay: 0.3,
-    //       duration: 0.2,
-    //       ease: "easeIn"
-    //     },
-    //   }}
-    //   className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
-    // >
-    //   <div className="container mx-auto dark:text-white">
-    //     <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-    //       <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-    //         <div className="flex flex-col gap-[30px] h-[50%]">
+    <div className="relative z-10 mx-auto max-w-[1440px] space-y-5">
+      <Reveal>
+        <GlassCard className="command-panel p-6 md:p-10">
+          <div className="max-w-3xl">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-cyan">Project systems</p>
+            <h1 className="h2 text-white">Proyectos reales con foco en producto, datos e integraciones.</h1>
+            <p className="mt-5 text-base leading-8 text-white/58">
+              Una seleccion de plataformas, dashboards, sistemas contables, backend cloud y experiencias con IA. Las paginas detalle quedan listas para evolucionar en la siguiente fase.
+            </p>
+          </div>
+        </GlassCard>
+      </Reveal>
 
-    //           {/* outline num */}
-    //           <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
-    //             {project.num}
-    //           </div>
+      <StaggerContainer className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+        {projects.map((project, index) => (
+          <motion.article variants={fadeUp} id={project.slug} key={project.slug}>
+            <GlassCard className="group flex h-full flex-col overflow-hidden p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan/30 hover:shadow-glow">
+              <div className="relative mb-5 h-44 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-cyan/12 via-violet/10 to-magenta/10">
+                <div className="absolute inset-0 bg-[linear-gradient(135deg,transparent,rgba(255,255,255,0.08),transparent)] opacity-0 transition group-hover:opacity-100" />
+                <div className="flex h-full flex-col justify-between p-5 transition-transform duration-500 group-hover:scale-105">
+                  <div className="flex items-center justify-between">
+                    <span className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-[10px] uppercase tracking-[0.12em] text-white/60">
+                      0{index + 1}
+                    </span>
+                    <Rocket className="h-5 w-5 text-cyan" />
+                  </div>
+                  <div>
+                    <p className="text-3xl font-bold text-white">{project.name}</p>
+                    <p className="text-sm text-cyan">{project.category}</p>
+                  </div>
+                </div>
+              </div>
 
-    //           {/* project category */}
-    //           <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-    //             {project.category} project
-    //           </h2>
+              <div className="flex items-center justify-between gap-3">
+                <span className={`rounded-full border px-3 py-1 text-[10px] uppercase ${statusStyles[project.status]}`}>
+                  {project.status}
+                </span>
+                <span className="inline-flex items-center gap-2 text-xs text-white/45">
+                  <Lock className="h-3.5 w-3.5" />
+                  Detalle pronto
+                </span>
+              </div>
+              <p className="mt-4 text-sm leading-7 text-white/62">{project.description}</p>
+              <p className="mt-4 text-sm leading-7 text-white/78">
+                <span className="text-cyan">Impacto:</span> {project.impact}
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {project.stack.map((item) => (
+                  <span key={item} className="rounded-full border border-white/8 bg-white/[0.04] px-3 py-1.5 text-xs text-white/58">
+                    {item}
+                  </span>
+                ))}
+              </div>
+              <div className="mt-auto pt-6">
+                <GlowButton href={`#${project.slug}`} variant="secondary" icon={ArrowUpRight}>
+                  Ver proyecto
+                </GlowButton>
+              </div>
+            </GlassCard>
+          </motion.article>
+        ))}
+      </StaggerContainer>
+    </div>
+  );
+};
 
-    //           {/* project description */}
-    //           <p className="text-white/60">
-    //             {project.description}
-    //           </p>
-
-    //           {/* stack */}
-    //           <ul className="flex gap-4">
-    //             {project.stack.map((item, index) => {
-    //               return (
-    //                 <li key={index} className="text-xl text-accent">
-    //                   {item.name}
-    //                   {index !== project.stack.length - 1 && ","}
-    //                 </li>
-    //               )
-    //             })}
-    //           </ul>
-
-    //           {/* border */}
-    //           <div className="border border-white/20"></div>
-
-    //           {/* buttons */}
-    //           <div className="flex items-center gap-4">
-
-    //             {/* live project button */}
-    //             <Link href={project.live}>
-    //               <TooltipProvider delayDuration={100}>
-    //                 <Tooltip>
-    //                   <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-    //                     <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
-    //                   </TooltipTrigger>
-    //                   <TooltipContent>
-    //                     <p>Live project</p>
-    //                   </TooltipContent>
-    //                 </Tooltip>
-    //               </TooltipProvider>
-    //             </Link>
-
-    //             {/* github project button */}
-    //             <Link href={project.github}>
-    //               <TooltipProvider delayDuration={100}>
-    //                 <Tooltip>
-    //                   <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-    //                     <BsGithub className="text-white text-3xl group-hover:text-accent" />
-    //                   </TooltipTrigger>
-    //                   <TooltipContent>
-    //                     <p>Github repository</p>
-    //                   </TooltipContent>
-    //                 </Tooltip>
-    //               </TooltipProvider>
-    //             </Link>
-
-    //           </div>
-    //         </div>
-    //       </div>
-    //       <div className="w-full xl:w-[50%]">
-    //         <Swiper
-    //           spaceBetween={30}
-    //           slidesPerView={1}
-    //           className="xl:h-[520px] mb-12"
-    //           onSlideChange={handleSlideChange}
-    //         >
-    //           {projects.map((project, index) => {
-    //             return (
-    //               <SwiperSlide key={index} className="w-full">
-    //                 <div className="h-[460px] relative group flex justify-center items-center bg-pink-500/20">
-    //                   {/* overlay */}
-    //                   <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-    //                   {/* image */}
-    //                   <div className="relative w-full h-full">
-    //                     <Image
-    //                       src={project.image}
-    //                       fill
-    //                       className="object-cover"
-    //                       alt=""
-    //                     />
-    //                   </div>
-    //                 </div>
-    //               </SwiperSlide>
-    //             )
-    //           })}
-
-    //           {/* slider buttons  */}
-    //           <WorkSliderBtns 
-    //           containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
-    //           btnStyles="bg-accent hover-bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
-    //           />
-    //         </Swiper>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </motion.section>
-    <MaintenancePage />
-  )
-}
-
-export default Work
+export default Work;
