@@ -27,15 +27,17 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#030014',
-        bgDark: '#030014',
+        primary: '#050816',
+        bgDark: '#050816',
+        ink: '#070A18',
+        panel: 'rgba(12, 18, 38, 0.72)',
+        line: 'rgba(148, 163, 184, 0.18)',
+        cyan: '#22D3EE',
+        violet: '#8B5CF6',
+        magenta: '#D946EF',
         bgLight: '#EAEAEA',
         textLight: "#222222",
         textSecLight: "#555555",
-        accent: {
-          DEFAULT: '#1E40AF',
-          hover: '#000E3D',
-        },
         accent: {
           DEFAULT: '#00E0FF',
           hover: '#00BFDA',
@@ -54,6 +56,10 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      boxShadow: {
+        glow: "0 0 36px rgba(34, 211, 238, 0.24)",
+        violetGlow: "0 0 42px rgba(139, 92, 246, 0.28)",
       },
     },
   },
