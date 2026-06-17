@@ -24,7 +24,7 @@ const MaicolBotButton = () => {
         </span>
         <span className="hidden text-left leading-tight sm:block">
           <span className="block text-sm font-semibold">Maicol Bot</span>
-          <span className="block text-[11px] text-white/55">Preguntame lo que quieras</span>
+          <span className="block text-[11px] text-white/55">Pregúntame lo que quieras</span>
         </span>
       </motion.button>
       <AnimatePresence>{open && <MaicolBotPanel onClose={() => setOpen(false)} />}</AnimatePresence>
