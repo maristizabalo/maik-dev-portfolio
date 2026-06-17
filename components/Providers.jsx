@@ -1,24 +1,21 @@
-"use client"
+"use client";
 
-import { ThemeProvider } from "next-themes"
-import { useEffect, useState } from "react"
-import Loading from "./Loading"
+import { ThemeProvider } from "next-themes";
+import { useSyncExternalStore } from "react";
+import Loading from "./Loading";
+
+const subscribe = () => () => {};
+const getClientSnapshot = () => true;
+const getServerSnapshot = () => false;
 
 const Providers = ({ children, ...props }) => {
+  const mounted = useSyncExternalStore(subscribe, getClientSnapshot, getServerSnapshot);
 
-    const [mounted, setMounted] = useState(false)
-    useEffect(() => {
-        setMounted(true)
-    }, [])
+  if (!mounted) {
+    return <Loading />;
+  }
 
-    if(!mounted){
-        return <Loading />
-    }
-    return (
-        <ThemeProvider {...props}>
-            {children}
-        </ThemeProvider>
-    )
-}
+  return <ThemeProvider {...props}>{children}</ThemeProvider>;
+};
 
 export default Providers;
