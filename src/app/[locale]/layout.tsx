@@ -96,9 +96,14 @@ export default async function LocaleLayout({
       className={cn(display.variable, sans.variable, mono.variable)}
     >
       <body className="min-h-[100dvh] bg-canvas text-ink antialiased">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        <div
+          aria-hidden
+          style={{ display: "none" }}
+          dangerouslySetInnerHTML={{
+            __html: `<script type="application/ld+json">${JSON.stringify(
+              jsonLd,
+            ).replace(/</g, "\\u003c")}</script>`,
+          }}
         />
         <ThemeProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>

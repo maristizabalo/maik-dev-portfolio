@@ -11,14 +11,7 @@ const STORAGE_KEY = "intro-seen";
 export function LoadingScreen() {
   const t = useTranslations();
   const reduce = useReducedMotion();
-  const [visible, setVisible] = useState(() => {
-    if (typeof window === "undefined") return true;
-    try {
-      return sessionStorage.getItem(STORAGE_KEY) !== "1";
-    } catch {
-      return true;
-    }
-  });
+  const [visible, setVisible] = useState(true);
 
   const dismiss = useCallback(() => {
     setVisible(false);
@@ -30,15 +23,20 @@ export function LoadingScreen() {
   }, []);
 
   useEffect(() => {
-    if (!visible) return;
-    const timer = window.setTimeout(dismiss, reduce ? 0 : 1500);
+    let seen = false;
+    try {
+      seen = sessionStorage.getItem(STORAGE_KEY) === "1";
+    } catch {
+      /* storage may be blocked */
+    }
+    const timer = window.setTimeout(dismiss, seen || reduce ? 0 : 1500);
     const onKey = () => dismiss();
     window.addEventListener("keydown", onKey, { once: true });
     return () => {
       window.clearTimeout(timer);
       window.removeEventListener("keydown", onKey);
     };
-  }, [reduce, visible, dismiss]);
+  }, [reduce, dismiss]);
 
   return (
     <AnimatePresence>
