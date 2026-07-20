@@ -4,6 +4,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { Space_Grotesk, Geist, JetBrains_Mono } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import { cn } from "@/lib/utils";
 
 const display = Space_Grotesk({
@@ -51,7 +52,7 @@ export default async function LocaleLayout({
       <body className="min-h-[100dvh] bg-canvas text-ink antialiased">
         <ThemeProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            {children}
+            <SmoothScroll>{children}</SmoothScroll>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
