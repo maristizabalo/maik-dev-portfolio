@@ -35,10 +35,10 @@ export function Contact() {
   const whatsapp = `https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(t("contactActions.whatsappMessage"))}`;
 
   const channels = [
-    { label: t("contactActions.email"), value: contact.email, href: mailto, Icon: EnvelopeSimple, external: false },
-    { label: t("contactActions.whatsapp"), value: contact.phoneDisplay, href: whatsapp, Icon: WhatsappLogo, external: true },
-    { label: t("contactActions.linkedin"), value: "/in/maicol-aristizabal", href: contact.linkedin, Icon: LinkedinLogo, external: true },
-    { label: t("contactActions.github"), value: "@maristizabalo", href: contact.github, Icon: GithubLogo, external: true },
+    { label: t("contactActions.email"), value: contact.email, href: mailto, Icon: EnvelopeSimple, external: false, track: "email_click" },
+    { label: t("contactActions.whatsapp"), value: contact.phoneDisplay, href: whatsapp, Icon: WhatsappLogo, external: true, track: "whatsapp_click" },
+    { label: t("contactActions.linkedin"), value: "/in/maicol-aristizabal", href: contact.linkedin, Icon: LinkedinLogo, external: true, track: "linkedin_click" },
+    { label: t("contactActions.github"), value: "@maristizabalo", href: contact.github, Icon: GithubLogo, external: true, track: "github_click" },
   ];
 
   return (
@@ -50,10 +50,11 @@ export function Contact() {
       />
 
       <div className="grid gap-4 sm:grid-cols-2">
-        {channels.map(({ label, value, href, Icon, external }) => (
+        {channels.map(({ label, value, href, Icon, external, track }) => (
           <a
             key={label}
             href={href}
+            data-track={track}
             {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             className="group flex items-center gap-4 rounded-2xl border border-line bg-surface-1 p-5 transition-colors hover:border-signal/40"
           >
@@ -71,7 +72,12 @@ export function Contact() {
       </div>
 
       <div className="mt-6 flex flex-wrap gap-3">
-        <a href={profile.cvUrl} download className={ctaVariants({ variant: "primary" })}>
+        <a
+          href={profile.cvUrl}
+          download
+          data-track="download_cv"
+          className={ctaVariants({ variant: "primary" })}
+        >
           <DownloadSimple size={16} />
           {t("contactActions.downloadCv")}
         </a>
