@@ -97,7 +97,8 @@ export function ConsoleDashboard({ loginPath }: { loginPath: string }) {
   }, [period]);
 
   useEffect(() => {
-    void load();
+    const id = setTimeout(() => void load(), 0);
+    return () => clearTimeout(id);
   }, [load]);
 
   const logout = async () => {

@@ -28,15 +28,14 @@ export function HeroMedia({ alt, className }: { alt: string; className?: string 
   const videoRef = useRef<HTMLVideoElement>(null);
   const [videoFailed, setVideoFailed] = useState(false);
   const [videoReady, setVideoReady] = useState(false);
-  const [saveData, setSaveData] = useState(false);
-
-  useEffect(() => {
+  const [saveData] = useState(() => {
+    if (typeof navigator === "undefined") return false;
     const nav = navigator as NavigatorWithConnection;
     const type = nav.connection?.effectiveType;
-    setSaveData(
-      nav.connection?.saveData === true || type === "2g" || type === "slow-2g",
+    return (
+      nav.connection?.saveData === true || type === "2g" || type === "slow-2g"
     );
-  }, []);
+  });
 
   const wantVideo =
     cfg.mode === "video" && !reduce && !saveData && !videoFailed;
