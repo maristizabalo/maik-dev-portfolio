@@ -95,3 +95,36 @@
     scroll-behavior: auto !important;
   }
 }
+
+@media print {
+  :root,
+  .dark {
+    --bg-base: 255 255 255;
+    --surface-1: 255 255 255;
+    --surface-2: 245 246 248;
+    --text-primary: 17 20 24;
+    --text-secondary: 60 66 74;
+    --text-faint: 110 116 124;
+    --border: 210 214 220;
+    --signal: 15 120 105;
+    color-scheme: light;
+  }
+
+  body {
+    background: #fff !important;
+  }
+
+  header,
+  footer,
+  .print-hide {
+    display: none !important;
+  }
+
+  main {
+    padding-top: 0 !important;
+  }
+
+  * {
+    box-shadow: none !important;
+  }
+}
