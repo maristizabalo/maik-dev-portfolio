@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-base: 244 246 248;
+    --surface-1: 255 255 255;
+    --surface-2: 234 238 242;
+    --text-primary: 11 16 23;
+    --text-secondary: 74 86 102;
+    --text-faint: 122 133 148;
+    --border: 211 218 226;
+    --signal: 15 168 144;
+    --signal-soft: 209 238 233;
+    --on-signal: 4 18 14;
+    --live: 214 69 52;
+    --shadow: 15 23 42;
+    color-scheme: light;
+  }
+
+  .dark {
+    --bg-base: 10 14 20;
+    --surface-1: 15 20 28;
+    --surface-2: 21 28 39;
+    --text-primary: 230 237 243;
+    --text-secondary: 139 151 167;
+    --text-faint: 99 110 125;
+    --border: 139 151 167;
+    --signal: 52 229 196;
+    --signal-soft: 18 46 44;
+    --on-signal: 4 18 14;
+    --live: 255 107 87;
+    --shadow: 0 0 0;
+    color-scheme: dark;
+  }
+
+  * {
+    border-color: rgb(var(--border) / 0.14);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: auto;
+  }
+
+  body {
+    background-color: rgb(var(--bg-base));
+    color: rgb(var(--text-primary));
+    font-family: var(--font-sans), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: rgb(var(--signal) / 0.24);
+    color: rgb(var(--text-primary));
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--signal));
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display), system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .font-mono-num {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
