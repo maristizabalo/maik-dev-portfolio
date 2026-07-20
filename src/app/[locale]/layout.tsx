@@ -5,6 +5,11 @@ import { Space_Grotesk, Geist, JetBrains_Mono } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
+import { Nav } from "@/components/layout/Nav";
+import { Footer } from "@/components/layout/Footer";
+import { ScrollProgress } from "@/components/layout/ScrollProgress";
+import { CommandPalette } from "@/components/layout/CommandPalette";
+import { LoadingScreen } from "@/components/experience/LoadingScreen";
 import { cn } from "@/lib/utils";
 
 const display = Space_Grotesk({
@@ -52,7 +57,14 @@ export default async function LocaleLayout({
       <body className="min-h-[100dvh] bg-canvas text-ink antialiased">
         <ThemeProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <SmoothScroll>{children}</SmoothScroll>
+            <SmoothScroll>
+              <LoadingScreen />
+              <ScrollProgress />
+              <Nav />
+              <main id="main">{children}</main>
+              <Footer />
+              <CommandPalette />
+            </SmoothScroll>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
