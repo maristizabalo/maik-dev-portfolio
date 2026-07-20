@@ -10,6 +10,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ScrollProgress } from "@/components/layout/ScrollProgress";
 import { CommandPalette } from "@/components/layout/CommandPalette";
 import { LoadingScreen } from "@/components/experience/LoadingScreen";
+import { ChatMount } from "@/components/chat/ChatMount";
 import { cn } from "@/lib/utils";
 
 const display = Space_Grotesk({
@@ -64,6 +65,7 @@ export default async function LocaleLayout({
               <main id="main">{children}</main>
               <Footer />
               <CommandPalette />
+              <ChatMount />
             </SmoothScroll>
           </NextIntlClientProvider>
         </ThemeProvider>

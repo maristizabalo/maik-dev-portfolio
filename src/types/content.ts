@@ -146,3 +146,15 @@ export interface ArchStep {
   title: Localized;
   description: Localized;
 }
+
+export interface SoftSkill {
+  id: string;
+  label: Localized;
+}
+
+export interface FaqEntry {
+  id: string;
+  keywords: string[];
+  question: Localized;
+  answer: Localized;
+}
