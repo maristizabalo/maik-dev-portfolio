@@ -1,0 +1,8 @@
+export { profile } from "./profile";
+export { contact } from "./contact";
+export { experience } from "./experience";
+export { projects } from "./projects";
+export { stack, techCategories } from "./stack";
+export { certifications, totalCertifiedHours } from "./certifications";
+export { services } from "./services";
+export { stats } from "./stats";
