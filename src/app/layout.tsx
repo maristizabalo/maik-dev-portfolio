@@ -3,10 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://mjaris.vercel.app"),
-  title: {
-    default: "Maicol Aristizábal — Senior Full Stack Developer",
-    template: "%s — Maicol Aristizábal",
-  },
+  title: "Maicol Aristizábal — Senior Full Stack Developer",
   description:
     "Ingeniero Full Stack con más de 6 años construyendo backend, frontend e integraciones con IA.",
 };

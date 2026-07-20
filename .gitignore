@@ -35,5 +35,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# claude local skills (installed for design guidance, not app code)
-/.claude/skills/
+# claude local tooling (skills + preview launch config)
+/.claude/
