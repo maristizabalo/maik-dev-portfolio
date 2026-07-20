@@ -1,6 +1,7 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { getMessages, setRequestLocale, getTranslations } from "next-intl/server";
 import { Space_Grotesk, Geist, JetBrains_Mono } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
@@ -13,6 +14,7 @@ import { LoadingScreen } from "@/components/experience/LoadingScreen";
 import { ChatMount } from "@/components/chat/ChatMount";
 import { Analytics } from "@/components/analytics/Analytics";
 import { cn } from "@/lib/utils";
+import { buildJsonLd } from "@/lib/seo/json-ld";
 
 const display = Space_Grotesk({
   subsets: ["latin"],
@@ -29,6 +31,41 @@ const mono = JetBrains_Mono({
   variable: "--font-mono",
   display: "swap",
 });
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://mjaris.vercel.app";
+  return {
+    title: { default: t("title"), template: "%s — Maicol Aristizábal" },
+    description: t("description"),
+    alternates: {
+      canonical: `${base}/${locale}`,
+      languages: {
+        es: `${base}/es`,
+        en: `${base}/en`,
+        "x-default": `${base}/es`,
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: `${base}/${locale}`,
+      siteName: "Maicol Aristizábal",
+      locale: locale === "es" ? "es_ES" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+    },
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -49,6 +86,8 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
   const messages = await getMessages();
+  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://mjaris.vercel.app";
+  const jsonLd = buildJsonLd(locale, base);
 
   return (
     <html
@@ -57,6 +96,10 @@ export default async function LocaleLayout({
       className={cn(display.variable, sans.variable, mono.variable)}
     >
       <body className="min-h-[100dvh] bg-canvas text-ink antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <ThemeProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <SmoothScroll>
