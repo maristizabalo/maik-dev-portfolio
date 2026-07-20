@@ -1,4 +1,4 @@
-import type { Certification } from "@/types/content";
+import type { Certification, CertificationArea, Localized } from "@/types/content";
 
 export const certifications: Certification[] = [
   {
@@ -165,3 +165,14 @@ export const totalCertifiedHours = certifications.reduce(
   (sum, cert) => sum + (cert.hours ?? 0),
   0,
 );
+
+export const certAreaLabels: Record<CertificationArea, Localized> = {
+  development: { es: "Desarrollo", en: "Development" },
+  backend: { es: "Backend", en: "Backend" },
+  frontend: { es: "Frontend", en: "Frontend" },
+  cloud: { es: "Cloud", en: "Cloud" },
+  data: { es: "Datos", en: "Data" },
+  ai: { es: "IA", en: "AI" },
+  "digital-gov": { es: "Gobierno digital", en: "Digital gov" },
+  other: { es: "Otros", en: "Other" },
+};

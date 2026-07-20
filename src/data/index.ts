@@ -6,3 +6,5 @@ export { stack, techCategories } from "./stack";
 export { certifications, totalCertifiedHours } from "./certifications";
 export { services } from "./services";
 export { stats } from "./stats";
+export { aiCapabilities } from "./ai";
+export { archLayers, archFlow } from "./architecture";

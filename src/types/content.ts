@@ -127,3 +127,22 @@ export interface Stat {
   label: Localized;
   confirmed: boolean;
 }
+
+export interface AiCapability {
+  id: string;
+  title: Localized;
+  description: Localized;
+}
+
+export interface ArchLayer {
+  id: string;
+  title: Localized;
+  description: Localized;
+  tech: string[];
+}
+
+export interface ArchStep {
+  order: number;
+  title: Localized;
+  description: Localized;
+}
